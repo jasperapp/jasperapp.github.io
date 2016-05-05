@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="./css/style.css"/>
+  <style>
+    .content {
+      max-width: 980px;
+    }
+
+    article {
+      margin: 0.5em 0;
+    }
+
+    code {
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+      background: #584b4f;
+      color: #eee;
+      white-space: nowrap;
+      font-size: 0.85em;
+    }
+
+    td code {
+      display: inline-block;
+      margin: 0.25em 0;
+    }
+
+    h2 {
+      border-bottom: solid 1px #aaa;
+      margin: 1.5em 0 0.5em;;
+    }
+
+    article:first-of-type h2 {
+      margin-top: 0.5em;
+    }
+
+    li {
+      padding: 0.25em 0;
+    }
+    
+    .toc {
+      text-align: right;
+      margin-top: 1em;
+    }
+
+    .toc a:not(:last-child):after {
+      content: "|";
+      padding: 0 0.5em;
+    }
+
+    .example {
+      margin: 1em 0;
+    }
+
+    .example:before {
+      content: 'Example'
+    }
+
+    /* see photon */
+    .icon:before {
+      position: relative;
+      display: inline-block;
+      font-family: "photon-entypo";
+      speak: none;
+      font-size: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icon-user:before {
+      content: '\e80a';
+    }
+
+    .icon-users:before {
+      content: '\e80b';
+    }
+
+    .icon-eye:before {
+      content: '\e826';
+    }
+  </style>
+</head>
+
+<body>
+<!-- navigation -->
+<nav>
+  <div>
+    <a href="/">Jasper</a>
+    <span class="stretch"></span>
+    <a href="./doc.html">Documentation</a>
+    <a href="https://github.com/jasperapp/jasper">GitHub</a>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="toc">
+    <a href="#your-issues">Your Issues</a>
+    <a href="#stream">Stream</a>
+    <a href="#filter">Filter</a>
+    <a href="#sort">Sort</a>
+  </div>
+  <article id="your-issues">
+    <h2>Your Issues</h2>
+    <p>
+      Jasper automatically shows issues you are related to.
+    </p>
+
+    <p>
+      <img src="./image/your-issues.png">
+    </p>
+
+    <ul>
+      <li>
+        <code><span class="icon icon-user"></span> <span>Me</span></code>
+        <span>shows issues you are involved in and of your repositories.(created, assigned, commented or mentioned)</span>
+      </li>
+      <li>
+        <code><span class="icon icon-users"></span> <span>Team</span></code>
+        <span>shows issues your team is mentioned to.</span>
+      </li>
+      <li>
+        <code><span class="icon icon-eye"></span> <span>Watching</span></code>
+        <span>shows issues of repository you watch.</span>
+      </li>
+    </ul>
+  </article>
+
+  <article id="stream">
+    <h2>Stream</h2>
+
+    <p>
+      Stream shows issues matched a particular conditions you want to see.
+    </p>
+
+    <p>
+      <img src="./image/stream.png">
+    </p>
+
+    <ul class="example">
+      <li><code>author:defunkt is:pr</code> shows pull requests created by defunkt.</li>
+      <li><code>involves:defunkt involves:jlord</code> shows issues defunkt is involved in or jlord is involved in.</li>
+      <li><code>cat repo:github/awesome</code> shows issues with "cat" and of github/awesome.</li>
+    </ul>
+
+    <p>
+      The major conditions are following.
+    </p>
+    <table>
+      <tbody>
+      <tr>
+        <td><code>cat dog</code> <code>cat OR dog</code> <code> cat NOT dog</code></td>
+        <td>issues with "cat" and "dog". issues with "cat" or "dog". issues with "cat" and without "dog".</td>
+      </tr>
+      <tr>
+        <td><code>involves:defunkt involves:jlord</code></td>
+        <td>issues defunkt is involved in or jlord is involved in. (created, assigned, commented or mentioned)</td>
+      </tr>
+      <tr>
+        <td><code>team:github/owners team:octocat/owners</code></td>
+        <td>issues @github/owner is mentioned in or @octocat/owners is mentioned in.</td>
+      </tr>
+      <tr>
+        <td><code>user:defunkt user:github</code></td>
+        <td>issues of /defunkt repositories or /github repositories.</td>
+      </tr>
+      <tr>
+        <td><code>repo:defunkt/awesome repo:github/awesome</code></td>
+        <td>issues of /defunkt/awesome repository or /github/awesome repository.</td>
+      </tr>
+      <tr>
+        <td><code>author:defunkt author:jlord</code></td>
+        <td>issues were created by defunkt or jlord.</td>
+      </tr>
+      <tr>
+        <td><code>assignee:defunkt author:jlord</code></td>
+        <td>issues defunkt was assigned to or jlord was assigned to.</td>
+      </tr>
+      <tr>
+        <td><code>mentions:defunkt mentions:jlord</code></td>
+        <td>issues defunkt was mentioned in or jlord was mentioned in.</td>
+      </tr>
+      <tr>
+        <td><code>commenter:defunkt commenter:jlord</code></td>
+        <td>issues defunkt commented to or jlord commented to.</td>
+      </tr>
+      <tr>
+        <td><code>language:javascript language:ruby</code></td>
+        <td>issues of javascript repository or ruby repository.</td>
+      </tr>
+      <tr>
+        <td><code>involves:defunkt -repo:github/awesome</code></td>
+        <td>issues defunkt was involved in and without github/awesome</td>
+      </tr>
+      <tr>
+        <td><code>is:issue</code> <code>is:pr</code></td>
+        <td>only issues. only pull request</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <p>
+      All conditions are <a class="external" href="https://help.github.com/articles/searching-issues/">Searching issues</a> and
+      <a class="external" href="https://help.github.com/articles/search-syntax/">Search Syntax</a> in GitHub.
+    </p>
+  </article>
+
+  <article id="filter">
+    <h2>Filter</h2>
+    <p>
+      The filtering function selects issues by various conditions in local.
+    </p>
+
+    <p>
+      <img src="./image/filter.png">
+    </p>
+
+    <ul class="example">
+      <li><code>is:open is:unread</code> selects issues opened and unread.</li>
+      <li><code>cat dog</code> selects issues with "cat" and "dog" in title.</li>
+      <li><code>label:"api bug" milestone:v0.0.1</code> selects issues have "api bug" label and in "v0.0.1" milestone.</li>
+    </ul>
+
+    <p>
+      The all conditions are following.
+    </p>
+
+    <table>
+      <tbody>
+      <tr>
+        <td><code>cat dog</code> <code>"bug fix"</code></td>
+        <td>issues with "cat" and "dog" in title. issues with "bug fix" in title.</td>
+      </tr>
+      <tr>
+        <td><code>is:open</code> <code>is:closed</code></td>
+        <td>issues are opened. issues are closed.</td>
+      </tr>
+      <tr>
+        <td><code>is:unread</code> <code>is:read</code></td>
+        <td>issues are unread. issues are read.</td>
+      </tr>
+      <tr>
+        <td><code>is:issue</code> <code>is:pr</code></td>
+        <td>only issues. only pull requests</td>
+      </tr>
+      <tr>
+        <td><code>is:star</code> <code>is:unstar</code></td>
+        <td>issues are stared. issues are unstared.</td>
+      </tr>
+      <tr>
+        <td><code>author:defunkt author:jlord</code></td>
+        <td>issues were created by defunkt or jlord.</td>
+      </tr>
+      <tr>
+        <td><code>assignee:defunkt author:jlord</code></td>
+        <td>issues defunkt was assigned to or jlord was assigned to.</td>
+      </tr>
+      <tr>
+        <td><code>user:defunkt user:github</code></td>
+        <td>issues of /defunkt repositories or /github repositories.</td>
+      </tr>
+      <tr>
+        <td><code>repo:defunkt/awesome repo:github/awesome</code></td>
+        <td>issues of /defunkt/awesome repository or /github/awesome repository.</td>
+      </tr>
+      <tr>
+        <td><code>label:bug label:api</code></td>
+        <td>issues with "bug" label and "api" label.</td>
+      </tr>
+      <tr>
+        <td><code>milestone:v1.0.0 milestone:v2.0.0</code></td>
+        <td>issues in "v1.0.0" milestone or "v2.0.0" milestone.</td>
+      </tr>
+      <tr>
+        <td><code>no:label</code> <code>no:assignee</code> <br/><code>no:milestone</code> <code>no:dueon</code></td>
+        <td>issues have no labels. issues have no assignee.<br/>issues have no milestone. issues have no due date.</td>
+      </tr>
+      <tr>
+        <td><code>have:label</code> <code>have:assignee</code> <br/><code>have:milestone</code> <code>have:dueon</code>
+        </td>
+        <td>issues have labels. issues have assignee.<br/>issues have milestone. issues have due date.</td>
+      </tr>
+      <tr>
+        <td><code>number:123 number:456</code></td>
+        <td>issues number of 123 or 456.</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </article>
+
+  <article id="sort">
+    <h2>Sort</h2>
+
+    <p>
+      The sorting function rearrange the order of issues. And you can specify more detailed condition as filter condition.
+    </p>
+
+    <p>
+      <img src="./image/sort1.png">
+      <img src="./image/sort2.png">
+    </p>
+
+    <ul class="example">
+      <li><code>sort:created</code> sorts by create date.</li>
+      <li><code>sort:repo</code> sorts by repository name</li>
+      <li><code>sort:"repo desc,created asc"</code> sorts by repository name and create date</li>
+    </ul>
+
+    <p>
+      The all conditions are following.
+    </p>
+
+    <table>
+      <tbody>
+      <tr>
+        <td><code>sort:updated</code></td>
+        <td>sorts by create date. default order is desc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:created</code></td>
+        <td>sorts by create date. default order is desc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:closed</code></td>
+        <td>sorts by close date. default order is desc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:read</code></td>
+        <td>sorts by read date. default order is desc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:dueon</code></td>
+        <td>sorts by due date. default order is asc. this condition is useful with <code>is:open have:dueon</code>.</td>
+      </tr>
+      <tr>
+        <td><code>sort:archived</code></td>
+        <td>sorts by archive date. default order is desc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:star</code></td>
+        <td>sorts by star date. default order desc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:title</code></td>
+        <td>sorts by title. default order asc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:author</code></td>
+        <td>sorts by author. default order is asc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:assignee</code></td>
+        <td>sorts by assignee. default order is asc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:user</code></td>
+        <td>sorts by user or organization. default order is asc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:repo</code></td>
+        <td>sorts by repository. default order is asc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:milestone</code></td>
+        <td>sorts by milestone. default order is desc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:number</code></td>
+        <td>sorts by number. default order is desc.</td>
+      </tr>
+      <tr>
+        <td><code>sort:type</code></td>
+        <td>sorts by type(issue/pull request). default order is asc.</td>
+      </tr>
+      </tbody>
+    </table>
+  </article>
+</div>
+
+<!-- footer -->
+<footer>
+  © 2016 <a href="https://twitter.com/h13i32maru">Ryo Maruyama</a>. All right reserved.
+</footer>
+
+<script>
+  var searchLinks = document.querySelectorAll('.github-search');
+  for (var i = 0; i < searchLinks.length; i++) {
+    var searchLink = searchLinks[i];
+    searchLink.href = 'https://github.com/search/?type=issues&o=desc&s=updated&q=' + encodeURIComponent(searchLink.textContent);
+  }
+</script>
+</body>
+
+</html>

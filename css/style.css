@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "photon-entypo";
+  src: url("./photon/fonts/photon-entypo.eot");
+  src: url("./photon/fonts/photon-entypo.eot?#iefix") format("eot"), url("./photon/fonts/photon-entypo.woff") format("woff"), url("./photon/fonts/photon-entypo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: #66595c;
+  font: 16px/1.7 normal normal;
+  font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
+  /*background: #faf6ec;*/
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.external {
+  text-decoration: underline;
+  color: #5555ff;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: solid 1px #ddd;
+}
+
+tr:nth-child(even) {
+  background: #eee;
+}
+
+tr:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+td {
+  padding: 0.25em 0.5em;
+  /*border: solid 1px #aaa;*/
+}
+
+p {
+  padding: 0.5em 0;
+}
+
+nav {
+  padding: 0.5em 0;
+  /*background: #545454;*/
+  /*background: #4C3852;*/
+  /*background: #426075;*/
+}
+
+nav > div {
+  display: flex;
+  max-width: 980px;
+  margin: auto;
+}
+
+nav > div .stretch {
+  flex-grow: 1;
+}
+
+nav a {
+  /*color: #fff;*/
+  padding: 0 1em;
+}
+
+nav a:first-child {
+  padding: 0;
+}
+
+header {
+  position: relative;
+  padding: 4em 0 8em;
+  text-align: center;
+  background: #86B0CE;
+  /*background: #4C3852;*/
+  border-top: solid 1px #fff;
+  /*color: white;*/
+}
+
+header .appstore {
+  position: absolute;
+  right: 0;
+  top: 185px;
+  left: 50%;
+  width: 1024px;
+  text-align: right;
+  margin-left: -550px;
+}
+
+.eye-catch {
+  position: relative;
+  text-align: center;
+}
+
+.eye-catch img{
+  max-width: 1024px;
+  margin: -7em auto 0;
+}
+
+.overview {
+  width: 400px;
+  margin: auto auto 4em;
+}
+
+.overview h2 {
+  text-align: center;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto 4em;
+}
+
+.content article img {
+  max-width: 300px;
+  box-shadow: 4px 4px 10px #aaa;
+}
+
+footer {
+  padding: 1em 0;
+  text-align: center;
+  background: #eee;
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+footer img {
+  width: 24px;
+  border-radius: 4px;
+}
+
+footer a {
+  color: #aaa;
+}
