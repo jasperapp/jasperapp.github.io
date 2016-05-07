@@ -1,8 +1,14 @@
 [
   {
     "version": "0.0.2",
-    "notes": "First release",
+    "notes": "Second release",
     "date": "2016-05-07T00:00:00Z",
+    "url": "macappstores://itunes.apple.com/jp/app/jasper/id123"
+  },
+  {
+    "version": "0.0.1",
+    "notes": "First release",
+    "date": "2016-05-06T00:00:00Z",
     "url": "macappstores://itunes.apple.com/jp/app/jasper/id123"
   }
 ]
