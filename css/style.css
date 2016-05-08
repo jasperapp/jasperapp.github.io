@@ -12,10 +12,10 @@
 }
 
 body {
-  color: #66595c;
+  /*color: #66595c;*/
+  color: #444;
   font: 16px/1.7 normal normal;
   font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
-  /*background: #faf6ec;*/
   background: #fff;
 }
 
@@ -85,9 +85,10 @@ nav a:first-child {
 
 header {
   position: relative;
-  padding: 4em 0 8em;
+  padding: 3em 0 8em;
   text-align: center;
-  background: #86B0CE;
+  /*background: #86B0CE;*/
+  background: #1c3e73;
   /*background: #4C3852;*/
   border-top: solid 1px #fff;
   /*color: white;*/
@@ -96,7 +97,7 @@ header {
 header .appstore {
   position: absolute;
   right: 0;
-  top: 185px;
+  top: 200px;
   left: 50%;
   width: 1024px;
   text-align: right;
