@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Jasper</title>
+  <meta property="og:url" content="https://jasperapp.io/">
+  <meta property="og:site_name" content="Jasper">
+  <meta property="og:title" content="Jasper - The GitHub Issue Reader">
+  <meta property="og:description" content="Jasper is a tool for reading issues and pull requests of GitHub efficiently. You will be able to read issues by condition of author, repository, organization and etc.">
+  <meta property="og:type" content="website">
+  <meta property="og:author" content="https://twitter.com/h13i32maru">
+  <meta property="og:image" content="https://jasperapp.io/image/logo_full.png">
+  <meta property="og:image:width" content="696">
+  <meta property="og:image:height" content="720">
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:site" content="@h13i32maru">
+  <meta property="twitter:creator" content="@h13i32maru">
+  <meta property="twitter:title" content="Jasper">
+  <meta property="twitter:description" content="The GitHub Issue Reader">
+  <meta property="twitter:image:src" content="https://jasperapp.io/image/logo_full.png">
+  <meta property="twitter:image:width" content="696">
+  <meta property="twitter:image:height" content="720">
+  <meta name="description" content="Jasper is a tool for reading issues and pull requests of GitHub efficiently. You will be able to read issues by condition of author, repository, organization and etc.">
+  <link rel="shortcut icon" href="./image/favicon.png">
+  <link rel="stylesheet" href="./css/style.css"/>
+
+  <style>
+    .content {
+      margin-top: 2em;
+    }
+
+    h1 {
+      border-bottom: solid 1px #aaa;
+      margin-bottom: 0.5em;
+    }
+
+    article {
+      margin-bottom: 1em;
+    }
+
+    ul {
+      padding-left: 1em;
+    }
+
+    li {
+      list-style: initial;
+    }
+  </style>
+</head>
+
+<body>
+<!-- navigation -->
+<nav>
+  <div>
+    <a href="/">Jasper</a>
+    <span class="stretch"></span>
+    <a href="./doc.html">Documentation</a>
+    <a href="./faq.html">FAQ</a>
+    <a href="https://github.com/jasperapp/jasper">GitHub</a>
+  </div>
+</nav>
+
+<div class="content">
+  <article>
+    <h1>Meaning of Jasper</h1>
+    <p>
+      "Jasper" means a mineral that quartz is aggregated. It is used as a flint in past.
+    </p>
+  </article>
+
+  <article>
+    <h1>Feedback</h1>
+    <p>
+      I am looking forward to your feedback into <a href="https://github.com/jasperapp/jasper">jasperapp/jasper</a>.
+      Thanks!
+    </p>
+  </article>
+
+  <article>
+    <h1>Next Features</h1>
+    <p>
+      I am considering the following features. Please wait a while.
+    </p>
+
+    <ul>
+      <li>mouse gesture and shortcut key</li>
+      <li>multi account</li>
+      <li>multi tab</li>
+      <li>support Windows</li>
+    </ul>
+  </article>
+
+  <article>
+    <h1>Architecture</h1>
+    <p>
+      The architecture of Jasper is made two parts.
+    </p>
+    <ul>
+      <li>Polling issues in background: Fetch issues by search API of GitHub. And store up issues to SQLite.</li>
+      <li>Display issues in frontend: Take issues from SQLite. And display issues using Electron.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h1>Merged Pull Request</h1>
+    <p>
+      Jasper can not distinguish a merged pull request from a closed pull request.
+      Because the search API of GitHub responses only "open" and "closed", does not responses "merged".
+      Sorry...
+    </p>
+  </article>
+
+  <article>
+    <h1>Using OSS</h1>
+    <p>
+      Jasper is using the following OSS. Thanks!
+    </p>
+
+    <ul>
+      <li><a href="http://electron.atom.io/">Electron (MIT)</a></li>
+      <li><a href="https://facebook.github.io/react/">React (BSD)</a></li>
+      <li><a href="http://momentjs.com/">Moment.js (MIT)</a></li>
+      <li><a href="https://github.com/mapbox/node-sqlite3">node-sqlite3 (BSD)</a></li>
+      <li><a href="https://github.com/jprichardson/node-fs-extra">node-fs-extra (MIT)</a></li>
+      <li><a href="https://github.com/npm/node-semver">node-semver (ISC)</a></li>
+      <li><a href="https://github.com/h13i32maru/color-logger">color-logger (MIT)</a></li>
+      <li><a href="http://babeljs.io/">Babel (MIT)</a></li>
+    </ul>
+  </article>
+</div>
+
+<!-- footer -->
+<footer>
+  Created by <a href="https://twitter.com/h13i32maru">Ryo Maruyama</a>,
+  Icon design <a href="http://transitkix.com">Miwa Kuramitsu</a>
+  © 2016 <a href="https://twitter.com/h13i32maru">Ryo Maruyama</a>. All right reserved.
+</footer>
+</body>
+
+</html>
