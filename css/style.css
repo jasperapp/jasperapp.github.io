@@ -94,14 +94,31 @@ header {
   /*color: white;*/
 }
 
-header .appstore {
+header .download {
   position: absolute;
   right: 0;
-  top: 200px;
+  top: 163px;
   left: 50%;
   width: 1024px;
   text-align: right;
   margin-left: -550px;
+  opacity: 0.25;
+}
+
+header .download .trial {
+  display: block;
+  color: white;
+  width: 165px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 10px;
+  background: #3763A9;
+  border: solid 1px rgba(255,255,255,0.5);
+  box-sizing: border-box;
 }
 
 .eye-catch {
@@ -148,4 +165,40 @@ footer img {
 
 footer a {
   color: #aaa;
+}
+
+/* see photon */
+.icon:before {
+  position: relative;
+  display: inline-block;
+  font-family: "photon-entypo";
+  speak: none;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+  content: '\e80a';
+}
+
+.icon-users:before {
+  content: '\e80b';
+}
+
+.icon-eye:before {
+  content: '\e826';
+}
+
+.icon-megaphone:before {
+  content: '\e8d2';
+}
+
+.icon-download:before {
+  content: '\e82d';
 }
