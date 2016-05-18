@@ -61,13 +61,6 @@
 </nav>
 
 <div class="content">
-  <article>
-    <h1>Meaning of Jasper</h1>
-    <p>
-      "Jasper" means a mineral that quartz is aggregated. It is used as a flint in past.
-    </p>
-  </article>
-
   <article id="feedback">
     <h1>Feedback</h1>
     <p>
@@ -95,11 +88,11 @@
   <article id="architecture">
     <h1>Architecture</h1>
     <p>
-      The architecture of Jasper is made two parts.
+      The architecture of Jasper is composed of two parts.
     </p>
     <ul>
-      <li>Polling issues in background: Fetch issues by search API of GitHub. And store up issues to SQLite.</li>
-      <li>Display issues in frontend: Take issues from SQLite. And display issues using Electron.</li>
+      <li>Polling issues in background: Fetch issues by search API of GitHub, and store up issues to SQLite.</li>
+      <li>Display issues in frontend: Take issues from SQLite, and display issues with Electron.</li>
     </ul>
   </article>
 
@@ -107,8 +100,7 @@
     <h1>Merged Pull Request</h1>
     <p>
       Jasper can not distinguish a merged pull request from a closed pull request.
-      Because the search API of GitHub responses only "open" and "closed", does not responses "merged".
-      Sorry...
+      This is because the search API of GitHub does not responses "merged", but responses only "open" and "closed", Sorry…
     </p>
   </article>
 
@@ -116,7 +108,7 @@
     <h1>Lost Issues</h1>
     <p>
       Jasper can not fetch all past issues of you.
-      Jasper will fetch recently issues of several hundred.
+      Jasper will fetch recent issues of several hundred.
       For this reason, in some case Jasper may lose a issue.
     </p>
   </article>
@@ -124,9 +116,8 @@
   <article id="inspired-by">
     <h1>Inspired by</h1>
     <p>
-      Jasper UI is inspired by <a href="http://happenapps.com/#quiver">Quiver</a>.
-      Quiver is awesome text editor for programmers.
-      If you does not use it still, please try using it!
+      Jasper UI is inspired by <a href="http://happenapps.com/#quiver">Quiver</a>, an awesome text editor for programmers.
+      Please try it if you haven't yet!
     </p>
   </article>
 
