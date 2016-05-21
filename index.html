@@ -81,8 +81,8 @@
   <img src="./image/logo.png" style="width:200px;"/>
   <div style="color: white; margin-top: -26px;"> The GitHub Issue Reader</div>
   <div class="download">
-    <a href="#" onclick="ga('send', 'event', 'Download', 'click', 'MacAppStore');"><img src="./image/appstore.svg"/></a>
-    <a class="trial" href="#" onclick="ga('send', 'event', 'Download', 'click', 'Mac30DaysFreeTrial');"><span class="icon icon-download"></span> <span>30Days Free Trial</span></a>
+    <a href="#" class="js-track"><img src="./image/appstore.svg"/></a>
+    <a class="trial js-track" href="#"><span class="icon icon-download"></span> <span>30Days Free Trial</span></a>
   </div>
 </header>
 
@@ -153,5 +153,19 @@
 </footer>
 
 <script src="./js/analytics.js"></script>
+
+<script>
+  var trackEls = document.querySelectorAll('.js-track');
+  for (var i = 0; i < trackEls.length; i++) {
+    trackEls[i].addEventListener('click', function(ev){
+      var url = ev.currentTarget.href;
+      ga('send', 'event', 'Download', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = url;}
+      });
+      ev.preventDefault();
+    });
+  }
+</script>
 </body>
 </html>
