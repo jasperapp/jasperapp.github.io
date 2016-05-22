@@ -197,3 +197,23 @@ footer a {
 .icon-download:before {
   content: '\e82d';
 }
+
+.icon-inbox:before {
+  content: '\e8af';
+}
+
+.icon-book:before {
+  content: '\e84f';
+}
+
+.icon-star:before {
+  content: '\e808';
+}
+
+.icon-doc-text:before {
+  content: '\e84b';
+}
+
+.icon-archive:before {
+  content: '\e851';
+}

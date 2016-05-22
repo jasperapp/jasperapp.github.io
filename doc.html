@@ -79,6 +79,11 @@
     .example:before {
       content: 'Example'
     }
+
+    .content article img.ss-doc {
+      max-width: 100%;
+      box-shadow: none;
+    }
   </style>
 </head>
 
@@ -96,12 +101,57 @@
 
 <div class="content">
   <div class="toc">
+    <a href="#library">Library</a>
     <a href="#your-issues">Your Issues</a>
     <a href="#stream">Stream</a>
     <a href="#filter">Filter</a>
     <a href="#sort">Sort</a>
+    <a href="#issue">Issue</a>
     <a href="#shortcut">Shortcut Key</a>
   </div>
+
+  <article>
+    <img class="ss-doc" src="./image/ss-doc.png">
+  </article>
+
+  <article id="library">
+    <h2>Library</h2>
+    <p>
+      Jasper will automatically summarizes all issues you have.
+    </p>
+
+    <p>
+      <img src="./image/library.png">
+    </p>
+
+    <ul>
+      <li>
+        <code><span class="icon icon-inbox"></span> <span>Inbox</span></code>
+        <span>All issues.</span>
+      </li>
+
+      <li>
+        <code><span class="icon icon-book"></span> <span>Unread</span></code>
+        <span>All unread issues</span>
+      </li>
+
+      <li>
+        <code><span class="icon icon-doc-text"></span> <span>Open</span></code>
+        <span>All opened issues</span>
+      </li>
+
+      <li>
+        <code><span class="icon icon-star"></span> <span>Star</span></code>
+        <span>All marked star issues.</span>
+      </li>
+
+      <li>
+        <code><span class="icon icon-archive"></span> <span>Archive</span></code>
+        <span>All arhived issues.</span>
+      </li>
+    </ul>
+  </article>
+
   <article id="your-issues">
     <h2>Your Issues</h2>
     <p>
@@ -217,7 +267,7 @@
   <article id="filter">
     <h2>Filter</h2>
     <p>
-      The filtering function selects issues by various conditions in local.
+      The filtering feature selects issues by various conditions in local.
     </p>
 
     <p>
@@ -302,7 +352,7 @@
     <h2>Sort</h2>
 
     <p>
-      The sorting function rearranges the order of issues. And you can specify more detailed condition as filter condition.
+      The sorting feature rearranges the order of issues. And you can specify more detailed condition as filter condition.
     </p>
 
     <p>
@@ -384,6 +434,18 @@
       </tr>
       </tbody>
     </table>
+  </article>
+
+  <article id="issue">
+    <h2>Issue</h2>
+    <p>
+      Jasper highlights the comments that you have not yet read.
+      And automatically scroll to the comment.
+    </p>
+
+    <p>
+      <img src="./image/unread-comment.png" style="max-width: 500px">
+    </p>
   </article>
 
   <article id="shortcut">
