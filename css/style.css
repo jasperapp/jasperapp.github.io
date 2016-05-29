@@ -111,6 +111,7 @@ header {
 .download {
   display: flex;
   margin-bottom: 4em;
+  opacity: 0.3;
 }
 
 .download > div {
