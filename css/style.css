@@ -89,33 +89,6 @@ header {
   /*color: white;*/
 }
 
-header .download {
-  position: absolute;
-  right: 0;
-  top: 163px;
-  left: 50%;
-  width: 1024px;
-  text-align: right;
-  margin-left: -550px;
-  opacity: 0.25;
-}
-
-header .download .trial {
-  display: block;
-  color: white;
-  width: 165px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 4px;
-  margin-right: 0;
-  margin-left: auto;
-  margin-top: 10px;
-  background: #3763A9;
-  border: solid 1px rgba(255,255,255,0.5);
-  box-sizing: border-box;
-}
-
 .eye-catch {
   position: relative;
   text-align: center;
@@ -128,11 +101,39 @@ header .download .trial {
 
 .overview {
   width: 400px;
-  margin: auto auto 4em;
+  margin: auto auto 2em;
 }
 
 .overview h2 {
   text-align: center;
+}
+
+.download {
+  display: flex;
+  margin-bottom: 4em;
+}
+
+.download > div {
+  margin: 0 0.5em;
+  text-align: center;
+}
+
+.download a.prod {
+  font-size: 1.2em;
+  display: block;
+  padding: 0.5em;
+  border-radius: 2px;
+  font-weight: bold;
+  min-width: 220px;
+  text-align: center;
+  color: #fff;
+  background: #729de2;
+  background: rgba(226, 43, 100, 0.85);
+}
+
+.download a.trial {
+  display: inline-block;
+  margin-top: 0.5em;
 }
 
 .content {
