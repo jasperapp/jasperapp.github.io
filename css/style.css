@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+@media (max-width: 1024px) {
+  * {
+    /* hack: スマホのchromeでサイトを見ると、横幅が780px以上の要素のフォントサイズが倍になってしまう不具合を回避する */
+    max-height: 100%;
+  }
+}
+
 @font-face {
   font-family: "photon-entypo";
   src: url("./photon/fonts/photon-entypo.eot");
@@ -65,6 +72,12 @@ nav > div {
   margin: auto;
 }
 
+@media (max-width: 1024px) {
+  nav > div {
+    max-width: 800px;
+  }
+}
+
 nav > div .stretch {
   flex-grow: 1;
 }
@@ -76,6 +89,11 @@ nav a {
 
 nav a:first-child {
   padding: 0;
+}
+
+nav .github {
+  width: 24px;
+  vertical-align: top;
 }
 
 header {
@@ -97,6 +115,12 @@ header {
 .eye-catch img{
   max-width: 1024px;
   margin: -7em auto 0;
+}
+
+@media (max-width: 1024px) {
+  .eye-catch img{
+    max-width: 800px;
+  }
 }
 
 .overview {
@@ -140,6 +164,12 @@ header {
 .content {
   max-width: 980px;
   margin: 0 auto 4em;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    max-width: 800px;
+  }
 }
 
 .content article img {
@@ -218,4 +248,8 @@ footer a {
 
 .icon-archive:before {
   content: '\e851';
+}
+
+.icon-github:before {
+  content: '\e8eb';
 }

@@ -24,10 +24,6 @@
   <link rel="shortcut icon" href="./image/favicon.png">
   <link rel="stylesheet" href="./css/style.css"/>
   <style>
-    .content {
-      max-width: 980px;
-    }
-
     article {
       margin: 0.5em 0;
     }
@@ -95,7 +91,7 @@
     <span class="stretch"></span>
     <a href="./doc.html">Documentation</a>
     <a href="./faq.html">FAQ</a>
-    <a href="https://github.com/jasperapp/jasper">GitHub</a>
+    <a href="https://github.com/jasperapp/jasper"><img src="./image/github.png" class="github"></a>
   </div>
 </nav>
 
@@ -177,9 +173,13 @@
       </li>
       <li>
         <code><span class="icon icon-megaphone"></span> <span>Subscription</span></code>
-        <span>shows issues you subscribed to with Jasper. so this does not connect subscription of GitHub.</span>
+        <span>
+          shows issues you subscribed to with Jasper.
+          right click <code><span class="icon icon-megaphone"></span> Subscription</code> and select <code>Subscribe issue</code>.
+          this does not connect subscription of GitHub.
+        </span>
         <div>
-          <img src="./image/subscription.png" width="200px" style="margin-top: 10px;">
+          <img src="./image/subscription.png">
         </div>
       </li>
     </ul>
@@ -221,7 +221,7 @@
       </tr>
       <tr>
         <td><code>user:defunkt user:github</code></td>
-        <td>issues of /defunkt repositories or /github repositories.</td>
+        <td>issues of /defunkt(user) repositories or /github(organization) repositories.</td>
       </tr>
       <tr>
         <td><code>repo:defunkt/awesome repo:github/awesome</code></td>
