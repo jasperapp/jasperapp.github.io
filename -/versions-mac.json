@@ -3,6 +3,7 @@
     "version": "0.0.3",
     "notes": "release",
     "date": "2016-05-07T00:00:00Z",
-    "url": "macappstores://itunes.apple.com/app/jasper/id1111218007?ls=1&mt=12"
+    "//url": "macappstores://itunes.apple.com/app/jasper/id1111218007?ls=1&mt=12",
+    "url": "https://jasperapp.io/release.html?os=mac#"
   }
 ]

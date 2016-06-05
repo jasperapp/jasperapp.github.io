@@ -135,17 +135,22 @@ header {
 }
 
 .download {
-  display: flex;
-  margin-bottom: 4em;
-  opacity: 0.3;
-}
+  /*display: flex;*/
+  /*margin-bottom: 4em;*/
+  /*opacity: 0.3;*/
 
-.download > div {
-  margin: 0 0.5em;
+  margin: 0 auto 2em auto;
   text-align: center;
 }
 
-.download a.prod {
+.download > div {
+  /*margin: 0 0.5em;*/
+  /*text-align: center;*/
+  /*width: 360px;*/
+  margin: auto;
+}
+
+.download a.gumroad {
   font-size: 1.2em;
   display: block;
   padding: 0.5em;
@@ -160,7 +165,10 @@ header {
 
 .download a.trial {
   display: inline-block;
-  margin-top: 0.5em;
+  width: 6.25em;
+  border: solid 1px #4078c0;
+  border-radius: 2px;
+  margin: 0.25em;
 }
 
 .content {
