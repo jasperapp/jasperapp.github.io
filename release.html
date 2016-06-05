@@ -33,7 +33,7 @@
       margin-bottom: 0.5em;
     }
 
-    h1 span {
+    h1 span:first-child {
       border: solid 1px #aaa;
       padding: 0.25em 0.5em;
       border-radius: 4px;
@@ -48,6 +48,19 @@
     article {
       margin-bottom: 1em;
     }
+
+    .prod.gumroad {
+      font-size: 0.6em;
+      border: solid;
+      display: block;
+      padding: 0.5em;
+      border-radius: 2px;
+      font-weight: bold;
+      min-width: 220px;
+      text-align: center;
+      color: #fff;
+      background: rgba(226, 43, 100, 0.85);
+    }
   </style>
 </head>
 
@@ -61,10 +74,22 @@
     <a href="./release.html">Releases</a>
     <a href="./faq.html">FAQ</a>
     <a href="https://github.com/jasperapp/jasper"><img src="./image/github.png" class="github"></a>
+    <a href="https://twitter.com/jasperappio"><img src="./image/twitter.png" class="twitter"></a>
   </div>
 </nav>
 
 <div class="content">
+  <div class="download" id="buy">
+    <div style="width: 360px;">
+      <a href="#" class="js-track prod gumroad">
+        <div>Update for Mac/Windows</div>
+        <div style="font-size: 0.75em;">at Gumroad</div>
+      </a>
+    </div>
+
+    <a href="#" class="js-track prod mas" style="font-size: 0.9em;">at Mac App Store</a>
+  </div>
+
   <article id="0-1-0">
     <h1><span>0.1.0</span> <time>2016/06/xx</time></h1>
     <p>
@@ -81,5 +106,6 @@
 </footer>
 
 <script src="./js/analytics.js"></script>
+<script src="./js/track.js"></script>
 </body>
 </html>

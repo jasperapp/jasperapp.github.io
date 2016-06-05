@@ -93,7 +93,8 @@ nav a:first-child {
   padding: 0;
 }
 
-nav .github {
+nav .github,
+nav .twitter {
   width: 24px;
   vertical-align: top;
 }
@@ -259,4 +260,8 @@ footer a {
 
 .icon-github:before {
   content: '\e8eb';
+}
+
+.icon-twitter:before {
+  content: '\e8f1';
 }

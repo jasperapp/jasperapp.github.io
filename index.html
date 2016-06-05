@@ -74,6 +74,7 @@
     <a href="./release.html">Releases</a>
     <a href="./faq.html">FAQ</a>
     <a href="https://github.com/jasperapp/jasper"><img src="./image/github.png" class="github"></a>
+    <a href="https://twitter.com/jasperappio"><img src="./image/twitter.png" class="twitter"></a>
   </div>
 </nav>
 
@@ -169,19 +170,6 @@
 </footer>
 
 <script src="./js/analytics.js"></script>
-
-<script>
-  var trackEls = document.querySelectorAll('.js-track');
-  for (var i = 0; i < trackEls.length; i++) {
-    trackEls[i].addEventListener('click', function(ev){
-      var url = ev.currentTarget.href;
-      ga('send', 'event', 'Download', 'click', url, {
-        'transport': 'beacon',
-        'hitCallback': function(){document.location = url;}
-      });
-      ev.preventDefault();
-    });
-  }
-</script>
+<script src="./js/track.js"></script>
 </body>
 </html>
