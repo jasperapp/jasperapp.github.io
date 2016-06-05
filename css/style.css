@@ -135,18 +135,12 @@ header {
 }
 
 .download {
-  /*display: flex;*/
-  /*margin-bottom: 4em;*/
-  /*opacity: 0.3;*/
-
+  opacity: 0.3;
   margin: 0 auto 2em auto;
   text-align: center;
 }
 
 .download > div {
-  /*margin: 0 0.5em;*/
-  /*text-align: center;*/
-  /*width: 360px;*/
   margin: auto;
 }
 
