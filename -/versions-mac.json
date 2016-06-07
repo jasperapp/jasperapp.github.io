@@ -1,9 +1,15 @@
 [
   {
+    "version": "0.1.1",
+    "notes": "release",
+    "date": "2016-06-07T13:17:00Z",
+    "url": "https://jasperapp.io/release.html?os=mac"
+  },
+  {
     "version": "0.0.3",
     "notes": "release",
     "date": "2016-05-07T00:00:00Z",
     "//url": "macappstores://itunes.apple.com/app/jasper/id1111218007?ls=1&mt=12",
-    "url": "https://jasperapp.io/release.html?os=mac#"
+    "url": "https://jasperapp.io/release.html?os=mac"
   }
 ]
