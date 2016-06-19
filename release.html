@@ -46,7 +46,19 @@
     }
 
     article {
-      margin-bottom: 1em;
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+      border-bottom: 1px solid #ddd;
+    }
+
+    article .changelog {
+      margin-left: 1em;
+    }
+
+    article ul {
+      padding-left: 1em;
+      list-style: disc;
+      margin-left: 1em;
     }
 
     .prod.gumroad {
@@ -81,7 +93,7 @@
 <div class="content">
   <div class="download" id="buy">
     <div style="width: 360px;">
-      <a href="https://gum.co/iALO" target="_blank" class="js-track prod gumroad">
+      <a href="https://gumroad.com/library" target="_blank" class="js-track prod gumroad">
         <div>Update for Mac/Windows</div>
         <div style="font-size: 0.75em;">at Gumroad</div>
       </a>
@@ -92,13 +104,34 @@
     <div style="margin-top: 1em;">
       <span>Update Free Trial</span>
       <div>
-        <a href="https://github.com/jasperapp/jasper/releases/download/v0.1.1/Mac_Jasper_v0.1.1.app.zip" class="js-track trial mac">Mac</a>
-        <a href="https://github.com/jasperapp/jasper/releases/download/v0.1.1/Windows_Jasper_v0.1.1.zip" class="js-track trial windows">Windows</a>
+        <a href="https://github.com/jasperapp/jasper/releases/download/v0.1.2/jasper_v0.1.2_trial_mac.app.zip" class="js-track trial mac">Mac</a>
+        <a href="https://github.com/jasperapp/jasper/releases/download/v0.1.2/jasper_v0.1.2_trial_windows.zip" class="js-track trial windows">Windows</a>
       </div>
     </div>
   </div>
 
-  <article id="0-1-0">
+  <article id="0-1-2">
+    <h1><span>0.1.2</span> <time>2016/06/19</time></h1>
+    <div class="changelog">
+      <p>Feat</p>
+      <ul>
+        <li>Support HTTP for GitHub Enterprise</li>
+        <li>Display unread count in Dock's badge (Mac only) ([#6](https://github.com/jasperapp/jasper/issues/6))</li>
+      </ul>
+      <p>Fix</p>
+      <ul>
+        <li>Text input is little frozen at issue text area</li>
+        <li>Prevent loading external web page ([#4](https://github.com/jasperapp/jasper/issues/4)) </li>
+        <li>Disable notification of archived issues</li>
+      </ul>
+      <p>Internal</p>
+      <ul>
+        <li>Update Electron to v1.2.2</li>
+      </ul>
+    </div>
+  </article>
+
+  <article id="0-1-1">
     <h1><span>0.1.1</span> <time>2016/06/07</time></h1>
     <p>
       First Release!
