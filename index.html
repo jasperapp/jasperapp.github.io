@@ -60,6 +60,27 @@
       margin-top: 1em;
       text-align: center;
     }
+
+    .downloads {
+      position: absolute;
+      width: 220px;
+      left: 50%;
+      top: 77px;
+      margin-left: 180px;
+    }
+
+    .downloads .for-platforms a {
+      font-size: 0.75em;
+    }
+
+    .buy-license {
+      position: absolute;
+      width: 220px;
+      left: 50%;
+      top: 185px;
+      margin-left: 180px;
+    }
+
   </style>
 </head>
 
@@ -82,6 +103,43 @@
 <header>
   <img src="./image/logo.png" style="width:200px;"/>
   <div style="color: white; margin-top: -26px;">The Issue Reader for GitHub</div>
+
+  <div>
+    <div class="downloads">
+
+      <div class="download" id="download">
+        <a href="#">
+          <div>Download App</div>
+          <div class="notice">30-day Free Trial for <span id="platform"></span></div>
+        </a>
+      </div>
+
+      <script>
+        var el = document.querySelector('#download');
+        if (navigator.platform.indexOf('Mac') !== -1) {
+          el.querySelector('a').href = '#mac';
+          el.querySelector('#platform').textContent = 'Mac';
+        } else if (navigator.platform.indexOf('Win') !== -1) {
+          el.querySelector('a').href = '#windows';
+          el.querySelector('#platform').textContent = 'Windows';
+        } else if (navigator.platform.indexOf('Linux') !== -1) {
+          el.querySelector('a').href = '#linux';
+          el.querySelector('#platform').textContent = 'Linux';
+        }
+      </script>
+
+      <div class="for-platforms">
+        <a href="./release.html">Other Downloads</a>
+      </div>
+    </div>
+
+    <div class="buy-license">
+      <a href="https://gum.co/TAXu" class="js-track" target="_blank">
+        <div>Buy License $12</div>
+        <div class="notice">Mac / Windows / Linux</div>
+      </a>
+    </div>
+  </div>
 </header>
 
 <!-- eye catch image -->
@@ -95,23 +153,6 @@
     Jasper is a tool for reading issues and pull requests in GitHub efficiently.
     You will be able to read issues by condition of author, repository, organization and etc.
   </p>
-</div>
-
-<div class="download" id="buy">
-  <div style="width: 360px;">
-    <a href="https://gum.co/iALO" class="js-track prod gumroad" target="_blank">
-      <div>Buy Now for Mac/Windows</div>
-      <div style="font-size: 0.75em;">at Gumroad $12</div>
-    </a>
-  </div>
-
-  <div style="margin-top: 1em;">
-    <span>Download 30-day Free Trial</span>
-    <div>
-      <a href="https://github.com/jasperapp/jasper/releases/download/v0.1.2/jasper_v0.1.2_trial_mac.app.zip" class="js-track trial mac">Mac</a>
-      <a href="https://github.com/jasperapp/jasper/releases/download/v0.1.2/jasper_v0.1.2_trial_windows.zip" class="js-track trial windows">Windows</a>
-    </div>
-  </div>
 </div>
 
 <!-- content -->

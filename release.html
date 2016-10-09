@@ -61,17 +61,14 @@
       margin-left: 1em;
     }
 
-    .prod.gumroad {
-      font-size: 0.6em;
-      border: solid;
-      display: block;
-      padding: 0.5em;
-      border-radius: 2px;
-      font-weight: bold;
-      min-width: 220px;
+    .downloads {
       text-align: center;
-      color: #fff;
-      background: rgba(226, 43, 100, 0.85);
+      margin-bottom: 1em;
+    }
+
+    .downloads .download {
+      display: inline-block;
+      margin: 0 1em;
     }
   </style>
 </head>
@@ -91,22 +88,26 @@
 </nav>
 
 <div class="content">
-  <div class="download" id="buy">
-    <div style="width: 360px;">
-      <a href="https://gumroad.com/library" target="_blank" class="js-track prod gumroad">
-        <div>Update for Mac/Windows</div>
-        <div style="font-size: 0.75em;">at Gumroad</div>
+  <div class="downloads">
+    <div class="download">
+      <a href="#mac">
+        <div>Download for Mac</div>
       </a>
     </div>
 
-    <div style="margin-top: 1em;">
-      <span>Update Free Trial</span>
-      <div>
-        <a href="https://github.com/jasperapp/jasper/releases/download/v0.1.2/jasper_v0.1.2_trial_mac.app.zip" class="js-track trial mac">Mac</a>
-        <a href="https://github.com/jasperapp/jasper/releases/download/v0.1.2/jasper_v0.1.2_trial_windows.zip" class="js-track trial windows">Windows</a>
-      </div>
+    <div class="download">
+      <a href="#windows">
+        <div>Download for Windows</div>
+      </a>
+    </div>
+
+    <div class="download">
+      <a href="#linux">
+        <div>Download for Linux</div>
+      </a>
     </div>
   </div>
+
 
   <article id="0-1-2">
     <h1><span>0.1.2</span> <time>2016/06/19</time></h1>

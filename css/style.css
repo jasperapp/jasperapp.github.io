@@ -135,35 +135,55 @@ header {
   text-align: center;
 }
 
-.download {
-  margin: 0 auto 2em auto;
-  text-align: center;
-}
-
-.download > div {
-  margin: auto;
-}
-
-.download a.gumroad {
-  font-size: 1.2em;
+.download a,
+.buy-license a {
+  font-size: 1.1em;
   display: block;
-  padding: 0.5em;
+  padding: 0.5em 0;
   border-radius: 2px;
   font-weight: bold;
   min-width: 220px;
   text-align: center;
   color: #fff;
-  background: #729de2;
-  background: rgba(226, 43, 100, 0.85);
+  background: rgba(255, 53, 116, 0.85);
 }
 
-.download a.trial {
-  display: inline-block;
-  width: 10.5em;
-  border: solid 1px #4078c0;
-  border-radius: 2px;
-  margin: 0.25em;
+.downloads .notice,
+.buy-license .notice {
+  font-size: 0.6em;
+  font-weight: normal;
+  color: #ffdcf2;
 }
+
+/*.download {*/
+  /*margin: 0 auto 2em auto;*/
+  /*text-align: center;*/
+/*}*/
+
+/*.download > div {*/
+  /*margin: auto;*/
+/*}*/
+
+/*.download a.gumroad {*/
+  /*font-size: 1.2em;*/
+  /*display: block;*/
+  /*padding: 0.5em;*/
+  /*border-radius: 2px;*/
+  /*font-weight: bold;*/
+  /*min-width: 220px;*/
+  /*text-align: center;*/
+  /*color: #fff;*/
+  /*background: #729de2;*/
+  /*background: rgba(226, 43, 100, 0.85);*/
+/*}*/
+
+/*.download a.trial {*/
+  /*display: inline-block;*/
+  /*width: 10.5em;*/
+  /*border: solid 1px #4078c0;*/
+  /*border-radius: 2px;*/
+  /*margin: 0.25em;*/
+/*}*/
 
 .content {
   max-width: 980px;
