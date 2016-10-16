@@ -108,7 +108,7 @@
     <div class="downloads">
 
       <div class="download" id="download">
-        <a href="#">
+        <a href="#" class="js-track">
           <div>Download App</div>
           <div class="notice">30-day Free Trial for <span id="platform"></span></div>
         </a>
@@ -117,13 +117,13 @@
       <script>
         var el = document.querySelector('#download');
         if (navigator.platform.indexOf('Mac') !== -1) {
-          el.querySelector('a').href = '#mac';
+          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.0/jasper_v0.2.0_mac.zip';
           el.querySelector('#platform').textContent = 'Mac';
         } else if (navigator.platform.indexOf('Win') !== -1) {
-          el.querySelector('a').href = '#windows';
+          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.0/jasper_v0.2.0_windows.zip';
           el.querySelector('#platform').textContent = 'Windows';
         } else if (navigator.platform.indexOf('Linux') !== -1) {
-          el.querySelector('a').href = '#linux';
+          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.0/jasper_v0.2.0_linux.zip';
           el.querySelector('#platform').textContent = 'Linux';
         }
       </script>
@@ -205,7 +205,7 @@
 <footer>
   Created by <a href="https://twitter.com/h13i32maru">Ryo Maruyama</a>,
   Icon design <a href="http://transitkix.com">Miwa Kuramitsu</a>
-  © 2016 <a href="https://twitter.com/h13i32maru">Ryo Maruyama</a>. All right reserved.
+  © 2016 <a href="https://github.com/h13i32maru">Ryo Maruyama</a>. All right reserved.
 </footer>
 
 <script src="./js/analytics.js"></script>
