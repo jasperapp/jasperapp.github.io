@@ -254,3 +254,7 @@ footer a {
 .icon-twitter:before {
   content: '\e8f1';
 }
+
+.icon-flag:before {
+  content: '\e82a';
+}

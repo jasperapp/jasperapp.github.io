@@ -66,7 +66,20 @@
     }
 
     .content article img.ss-doc {
-      max-width: 100%;
+      max-width: 80%;
+      box-shadow: none;
+    }
+
+    ul.mini-list {
+      font-size: 0.9em;
+      margin-left: 1em;
+    }
+
+    ul.mini-list li {
+      padding: 0;
+    }
+
+    .content article img.plane {
       box-shadow: none;
     }
 
@@ -106,7 +119,7 @@
 </nav>
 
 <div class="content">
-  <article>
+  <article style="text-align: center;">
     <img class="ss-doc" src="./image/ss-doc.png">
   </article>
 
@@ -289,6 +302,7 @@
         <li><code>is:open is:unread</code> selects issues opened and unread.</li>
         <li><code>cat dog</code> selects issues with "cat" and "dog" in title.</li>
         <li><code>label:"api bug" milestone:v0.0.1</code> selects issues which have "api bug" label and in "v0.0.1" milestone.</li>
+        <li><code>-label:bug -author:alice</code> selects issues which don't have "bug" label and were not created by "alice".</li>
       </ul>
 
       <p>
@@ -353,6 +367,20 @@
         <tr>
           <td><code>number:123 number:456</code></td>
           <td>issues number of 123 or 456.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>-author:...</code>
+            <code>-assignee:...</code>
+            <code>-user:...</code>
+            <br/>
+            <code>-repo:...</code>
+            <code>-label:...</code>
+            <code>-milestone:...</code>
+            <br/>
+            <code>-number:...</code>
+          </td>
+          <td><code>-</code> specifies exclusion condition.</td>
         </tr>
         </tbody>
       </table>
@@ -449,6 +477,36 @@
 
     <article id="issue" class="tab-content">
       <h2>Issue</h2>
+
+      <p>
+        The issue in issues pane(second column) displays some attributes of it.
+      </p>
+
+      <p>
+        <img src="./image/issue-attr.png"/>
+      </p>
+
+      <p>
+        You can filter issues with attributes by clicking.
+
+        For example if you click <code><span class="icon icon-flag"> </span>v0.2.0</code>, filter issues with <code>milestone:v0.2.0</code>.
+
+        <br/>
+        Clickable attributes are
+        <img class="plane" src="./image/icon_issue_open.svg">(open),
+        <img class="plane" src="./image/icon_issue_close.svg">(closed),
+        milestone, label, author, assignee, user, repo and comment(read/unread).
+
+        You can control a filter behavior by the following operation.
+      </p>
+
+      <ul class="mini-list">
+        <li>click without any key, append the filter to a current filter.</li>
+        <li>click with ⌘(or ctrl) key, replace a current filter with the filter.</li>
+        <li>click with shift key, remove the filter from a current filter.</li>
+      </ul>
+
+      <br/>
       <p>
         Jasper highlights the comments that you have not yet read.
         And automatically scroll to the comment.
@@ -469,7 +527,7 @@
       <ul>
         <li><code>j/k</code> <span>move issues up and down</span></li>
         <li><code>space(+ shift)</code> <span>scroll issue page up and down</span></li>
-        <li><code>shift + click</code> <span>open external browser the target link in issue page.</span></li>
+        <li><code>shift + click</code> or <code>cmd + click</code> <span>open external browser the target link in issue page.</span></li>
       </ul>
 
     </article>
