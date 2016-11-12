@@ -38,6 +38,27 @@
     footer a {
       color: #eee;
     }
+
+    .not-available {
+      position: relative;
+    }
+
+    .not-available .download, .not-available article {
+      opacity: 0.3;
+    }
+
+    .not-available:after {
+      content: 'There is no beta version available';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      color: #ddd;
+      font-size: 2em;
+      text-align: center;
+      padding-top: 2em;
+    }
   </style>
 </head>
 
@@ -56,7 +77,7 @@
   </div>
 </nav>
 
-<div class="content">
+<div class="content not-available">
   <div class="downloads">
     <div class="download">
       <a href="https://github.com/jasperapp/jasper/releases/download/v0.2.1-beta.1/jasper_v0.2.1-beta.1_mac.zip">
