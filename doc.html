@@ -232,6 +232,14 @@
       <table>
         <tbody>
         <tr>
+          <td><code>is:issue</code> <code>is:pr</code></td>
+          <td>only issues. only pull request.</td>
+        </tr>
+        <tr>
+          <td><code>is:open</code> <code>is:closed</code></td>
+          <td>only open issues. only closed issues.</td>
+        </tr>
+        <tr>
           <td><code>cat dog</code> <code>cat OR dog</code> <code> cat NOT dog</code></td>
           <td>issues with "cat" and "dog". issues with "cat" or "dog". issues with "cat" and without "dog".</td>
         </tr>
@@ -274,10 +282,6 @@
         <tr>
           <td><code>involves:defunkt -repo:github/awesome</code></td>
           <td>issues defunkt was involved in and without github/awesome</td>
-        </tr>
-        <tr>
-          <td><code>is:issue</code> <code>is:pr</code></td>
-          <td>only issues. only pull request</td>
         </tr>
         </tbody>
       </table>
