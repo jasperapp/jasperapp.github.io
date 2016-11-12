@@ -43,3 +43,13 @@ article ul {
   display: inline-block;
   margin: 0 1em;
 }
+
+code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  background: #444;
+  color: #eee;
+  white-space: nowrap;
+  font-size: 0.85em;
+}
