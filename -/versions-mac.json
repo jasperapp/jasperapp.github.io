@@ -1,5 +1,11 @@
 [
   {
+    "version": "0.2.1",
+    "notes": "release",
+    "date": "2016-11-13T00:00:00Z",
+    "url": "https://jasperapp.io/release.html?os=mac"
+  },
+  {
     "version": "0.2.0",
     "notes": "release",
     "date": "2016-10-22T10:42:00Z",
