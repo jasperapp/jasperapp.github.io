@@ -86,7 +86,7 @@ nav > div .stretch {
 
 nav a {
   color: inherit;
-  padding: 0 1em;
+  padding: 0 0.75em;
 }
 
 nav a:first-child {
@@ -95,8 +95,8 @@ nav a:first-child {
 
 nav .github,
 nav .twitter {
-  width: 24px;
-  vertical-align: top;
+  width: 20px;
+  vertical-align: middle;
 }
 
 header {
