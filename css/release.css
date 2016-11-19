@@ -44,6 +44,19 @@ article ul {
   margin: 0 1em;
 }
 
+.downloads .download > a div {
+  position: relative;
+  padding-right: 16px;
+}
+
+.downloads img {
+  position: absolute;
+  top: -2px;
+  width: 32px;
+  padding-left: 4px;
+  filter: invert(100%);
+}
+
 code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   padding: 0.2em 0.5em;
