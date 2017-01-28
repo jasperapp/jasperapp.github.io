@@ -49,6 +49,10 @@
       margin: 1.5em 0 0.5em;;
     }
 
+    h3 {
+      margin-top: 1em;
+    }
+
     article:first-of-type h2 {
       margin-top: 0.5em;
     }
@@ -136,7 +140,7 @@
       <li><a href="#filter">Filter</a></li>
       <li><a href="#sort">Sort</a></li>
       <li><a href="#issue">Issue</a></li>
-      <li><a href="#shortcut">Shortcut Key</a></li>
+      <li><a href="#shortcut">Keyboard Shortcuts</a></li>
     </ul>
 
     <article id="library" class="tab-content tab-active">
@@ -527,17 +531,113 @@
     </article>
 
     <article id="shortcut" class="tab-content">
-      <h2>Shortcut Key</h2>
+      <h2>Keyboard shortcuts</h2>
 
-      <p>
-        Now, Jasper supports the following shortcut key.
-      </p>
+      <p>Jasper supports below keyboard shortcuts</p>
 
-      <ul>
-        <li><code>j/k</code> <span>move issues up and down</span></li>
-        <li><code>space(+ shift)</code> <span>scroll issue page up and down</span></li>
-        <li><code>shift + click</code> or <code>cmd + click</code> <span>open external browser the target link in issue page.</span></li>
-      </ul>
+      <h3>For Streams</h3>
+      <table>
+        <tbody>
+        <tr>
+          <td><code>D / F</code></td>
+          <td>Next Stream / Prev Stream</td>
+        </tr>
+        <tr>
+          <td><code>F1 / F2 / F3 / F4 / F5</code></td>
+          <td>Move to Inbox / Unread / Open / Star / Archive stream</td>
+        </tr>
+        <tr>
+          <td><code>F6 / F7 / F8 / F9</code></td>
+          <td>Move to Me / Team / Watching / Subscription stream</td>
+        </tr>
+        <tr>
+          <td><code>1 / 2 / 3 / 4 / 5</code></td>
+          <td>Move to 1st / 2nd / 3rd / 4th / 5th stream</td>
+        </tr>
+        <tr>
+          <td><code>Alt + L</code></td>
+          <td>Restart All Streams</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>For Issues</h3>
+      <table>
+        <tbody>
+        <tr>
+          <td><code>.</code></td>
+          <td>Load Issues</td>
+        </tr>
+        <tr>
+          <td><code>J / K</code></td>
+          <td>Next Issue / Prev Issue</td>
+        </tr>
+        <tr>
+          <td><code>Y</code></td>
+          <td>Toggle to skip read issues when move next/prev issue via keyboard shortcuts</td>
+        </tr>
+        <tr>
+          <td><code>I / S / E</code></td>
+          <td>Toggle Read / Star / Archive</td>
+        </tr>
+        <tr>
+          <td><code>/</code></td>
+          <td>Focus on filter input box</td>
+        </tr>
+        <tr>
+          <td><code>C</code></td>
+          <td>Clear filter</td>
+        </tr>
+        <tr>
+          <td><code>A / N / U / O / M</code></td>
+          <td>Filter Author / Assignee / Unread / Open / Star</td>
+        </tr>
+        <tr>
+          <td><code>Cmd(Ctrl) + O</code></td>
+          <td>Open with External</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>For Page</h3>
+      <table>
+        <tbody>
+        <tr>
+          <td><code>Cmd(Ctrl) + R</code></td>
+          <td>Reload Page</td>
+        </tr>
+        <tr>
+          <td><code>Cmd(Ctrl) + [ / Cmd(Ctrl) + ]</code></td>
+          <td>Back Page / Next Page</td>
+        </tr>
+        <tr>
+          <td><code>Cmd(Ctrl) + J / Cmd(Ctrl) + K</code></td>
+          <td>Scroll Down / Scroll Up</td>
+        </tr>
+        <tr>
+          <td><code>Cmd(Ctrl) + L</code></td>
+          <td>Open Location</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>For Other</h3>
+      <table>
+        <tbody>
+        <tr>
+          <td><code>Cmd(Ctrl) + 1 / Cmd(Ctrl) + 2 / Cmd(Ctrl) + 3</code></td>
+          <td>Single Pane / Two Pane / Three Pane</td>
+        </tr>
+        <tr>
+          <td><code>Mac: Cmd + Ctrl + F / Windows: F11</code></td>
+          <td>Toggle Full Screen</td>
+        </tr>
+        <tr>
+          <td><code>Cmd(Ctrl) + + / Cmd(Ctrl) + - / Cmd(Ctrl) + 0</code></td>
+          <td>Zoom Out / In / Reset</td>
+        </tr>
+        </tbody>
+      </table>
 
     </article>
   </div>

@@ -69,7 +69,7 @@
       margin-left: 180px;
     }
 
-    .downloads .for-platforms a {
+    .downloads .for-platforms * {
       font-size: 0.75em;
       color: #eee;
     }
@@ -127,19 +127,21 @@
       <script>
         var el = document.querySelector('#download');
         if (navigator.platform.indexOf('Mac') !== -1) {
-          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.3/jasper_v0.2.3_mac.zip';
+          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.4/jasper_v0.2.4_mac.zip';
           el.querySelector('#platform').textContent = 'Mac';
         } else if (navigator.platform.indexOf('Win') !== -1) {
-          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.3/jasper_v0.2.3_windows.zip';
+          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.4/jasper_v0.2.4_windows.zip';
           el.querySelector('#platform').textContent = 'Windows';
         } else if (navigator.platform.indexOf('Linux') !== -1) {
-          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.3/jasper_v0.2.3_linux.zip';
+          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.2.4/jasper_v0.2.4_linux.zip';
           el.querySelector('#platform').textContent = 'Linux';
         }
       </script>
 
       <div class="for-platforms">
         <a href="./release.html">Other Downloads</a>
+        <span>/</span>
+        <a href="./beta.html">Beta Downloads</a>
       </div>
     </div>
 

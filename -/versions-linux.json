@@ -1,5 +1,11 @@
 [
   {
+    "version": "0.2.4",
+    "notes": "release",
+    "date": "2017-01-28T13:45:00Z",
+    "url": "https://jasperapp.io/release.html?os=linux"
+  },
+  {
     "version": "0.2.3",
     "notes": "release",
     "date": "2016-11-21T21:00:00Z",
