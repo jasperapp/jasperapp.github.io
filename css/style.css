@@ -127,8 +127,10 @@ header {
 }
 
 .overview {
-  width: 400px;
+  width: 500px;
   margin: auto auto 2em;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .overview h2 {
@@ -142,7 +144,7 @@ header {
   padding: 0.5em 0;
   border-radius: 2px;
   font-weight: bold;
-  min-width: 220px;
+  min-width: 200px;
   text-align: center;
   color: #fff;
   background: rgba(255, 65, 124, 0.85);

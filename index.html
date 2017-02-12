@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Jasper</title>
+  <title>Jasper - A flexible and powerful issue reader for GitHub</title>
   <meta property="og:url" content="https://jasperapp.io/">
   <meta property="og:site_name" content="Jasper">
-  <meta property="og:title" content="Jasper - The Issue Reader for GitHub">
-  <meta property="og:description" content="Jasper is a tool for reading issues and pull requests in GitHub efficiently. You will be able to read issues by condition of author, repository, organization and etc.">
+  <meta property="og:title" content="Jasper - A flexible and powerful issue reader for GitHub">
+  <meta property="og:description" content="You will be able to read, track and discover many active issues very flexibly by using Jasper in GitHub.">
   <meta property="og:type" content="website">
   <meta property="og:author" content="https://twitter.com/h13i32maru">
   <meta property="og:image" content="https://jasperapp.io/image/logo_full.png">
@@ -15,20 +15,21 @@
   <meta property="twitter:card" content="summary">
   <meta property="twitter:site" content="@h13i32maru">
   <meta property="twitter:creator" content="@h13i32maru">
-  <meta property="twitter:title" content="Jasper">
-  <meta property="twitter:description" content="The Issue Reader for GitHub">
+  <meta property="twitter:title" content="Jasper - A flexible and powerful issue reader for GitHub">
+  <meta property="twitter:description" content="You will be able to read, track and discover many active issues very flexibly by using Jasper in GitHub.">
   <meta property="twitter:image:src" content="https://jasperapp.io/image/logo_full.png">
   <meta property="twitter:image:width" content="696">
   <meta property="twitter:image:height" content="720">
-  <meta name="description" content="Jasper is a tool for reading issues and pull requests of GitHub efficiently. You will be able to read issues by condition of author, repository, organization and etc.">
+  <meta name="description" content="You will be able to read, track and discover many active issues very flexibly by using Jasper in GitHub.">
   <link rel="shortcut icon" href="./image/favicon.png">
   <link rel="stylesheet" href="./css/style.css"/>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <style>
     .content {
       max-width: 1200px;
       display: flex;
       border-top: 1px solid #ddd;
-      padding-top: 3em;
+      padding-top: 2em;
       flex-flow: row wrap;
     }
 
@@ -55,18 +56,12 @@
       margin-top: 1em;
     }
 
-    .more {
-      width: 100%;
-      margin-top: 1em;
-      text-align: center;
-    }
-
     .downloads {
       position: absolute;
-      width: 220px;
+      width: 200px;
       left: 50%;
       top: 77px;
-      margin-left: 180px;
+      margin-left: 220px;
     }
 
     .downloads .for-platforms * {
@@ -76,10 +71,10 @@
 
     .buy-license {
       position: absolute;
-      width: 220px;
+      width: 200px;
       left: 50%;
       top: 185px;
-      margin-left: 180px;
+      margin-left: 220px;
     }
 
     .buy-license .important-notice-for-paid-users a {
@@ -87,6 +82,69 @@
       font-size: 0.75em;
       color: #eee;
       font-weight: normal;
+    }
+
+    .stream-sample {
+      background: #214b8c;
+      color: #fff;
+      border-radius: 0.3em;
+      text-align: center;
+      font-family: Menlo, Consolas, 'Courier New', Courier, Monaco, monospace;
+      font-size: 0.9em;
+      position: relative;
+      padding-left: 4.5em;
+    }
+
+    .stream-sample .label {
+      border: solid 1px #8098bd;
+      border-radius: 0.2em;
+      padding: 0.1em 0.5em;
+      background: #214b8c;
+      font-size: 0.85em;
+      position: absolute;
+      left: 2em;
+    }
+
+    .compare-table {
+      width: auto;
+      margin: auto;
+    }
+
+    .compare-table thead tr {
+      background: #444;
+      color: #eee;
+    }
+
+    .compare-table .note {
+      font-style: italic;
+      font-size: 0.8em;
+      color: #888;
+    }
+
+    .compare-table tbody {
+      line-height: 1.5em;
+    }
+
+    .users {
+      text-align: center;
+      width: 100%;
+      margin-top: 3em;
+      border-top: solid 1px #ddd;
+      padding-top: 2em;
+    }
+
+    .users twitterwidget {
+      margin: auto;
+    }
+
+    .users .users-inner {
+      height: 600px;
+      overflow: scroll;
+      display: inline-block;
+      border: solid 1px #ddd;
+      border-radius: 0.5em;
+      padding: 1em;
+      background: #efefef;
     }
 
   </style>
@@ -104,15 +162,15 @@
     <a href="./beta.html">Beta</a>
     <a href="./faq.html">FAQ</a>
     <a href="./license.html">License</a>
-    <a href="https://github.com/jasperapp/jasper"><img src="./image/github.png" class="github"></a>
     <a href="https://twitter.com/jasperappio"><img src="./image/twitter.png" class="twitter"></a>
+    <a href="https://github.com/jasperapp/jasper"><img src="./image/github.png" class="github"></a>
   </div>
 </nav>
 
 <!-- header -->
 <header>
   <img src="./image/logo.png" style="width:200px;"/>
-  <div style="color: white; margin-top: -26px;">The Issue Reader for GitHub</div>
+  <div style="color: white; margin-top: -26px;">A flexible and powerful issue reader for GitHub</div>
 
   <div>
     <div class="downloads">
@@ -164,58 +222,65 @@
 </div>
 
 <div class="overview" id="overview">
-  <h2>Overview</h2>
   <p>
-    Jasper is a tool for reading issues and pull requests in GitHub efficiently.
-    You will be able to read issues sorting author, repository, organization, and more.
+    You will be able to read, track and discover many active issues very flexibly by using Jasper in GitHub.
+    It is enabled by a powerful function called "stream" of Jasper.
+  </p>
+  <p class="stream-sample">
+    <span class="label">example</span>
+    <span>org:electron is:issue label:bug</span>
   </p>
 </div>
 
 <!-- content -->
 <div class="content">
+  <table class="compare-table">
+    <caption>A tracking condition comparison Jasper(<a href="./doc.html#stream">streams</a>) and GitHub(<a href="https://help.github.com/articles/about-noble claion-emails/">email</a>)</caption>
+    <thead>
+    <tr><td>Tracking conditions</td><td>Jasper</td><td>GitHub</td></tr>
+    </thead>
+    <tbody>
+    <tr><td>Repositories <br><span class="note">belongs to organizations or users</span></td><td>Any repositories</td><td>Any repositories</td></tr>
+    <tr><td>State <br/><span class="note">open, closed, approved and request changed</span></td><td>Any state</td><td>Only related to myself</td></tr>
+    <tr><td>Involves <br/><span class="note">assignees, authors, mentions, and comments</span></td><td>Any users</td><td>Only related to myself</td></tr>
+    <tr><td>Team Mentions <br/><span class="note">accessible teams</span></td><td>Any teams</td><td>Only related to my teams</td></tr>
+    <tr><td>Organizations <br><span class="note">organizations and users</span></td><td>Any organizations</td><td>-</td></tr>
+    <tr><td>Labels <br/><span class="note">bug, enhancement, invalid and more</span></td><td>Any labels</td><td>-</td></tr>
+    <tr><td>Milestones <br/><span class="note">v0.1.0 and v1.0.0 and v2.0.0-alpha and more</span></td><td>Any milestones</td><td>-</td></tr>
+    <tr><td>Language <br/><span class="note">JavaScript, Ruby, Go and more</span></td><td>Any language</td><td>-</td></tr>
+    <tr><td>Type <br/><span class="note">issue and/or pull request</span></td><td>Any types</td><td>-</td></tr>
+    <tr><td>Egosurfing <br/><span class="note">own libraries and like tools and more</span></td><td>Any words</td><td>-</td></tr>
+    </tbody>
+  </table>
 
-  <article>
-    <div class="desc">
-      <h2>Your Issues</h2>
-      <p>
-        By default, Jasper automatically shows issues - ones you are involved in, your team is mentioned in, and of repositories you watch.
-        You'll never miss issues.
-      </p>
+  <div class="users">
+    <p>Hundreds of developers are using Jasper in a business/OSS activity. <br/>And it is also used by several people in GitHub inc.</p>
+    <div class="users-inner">
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">I’m amazed how much more productive @ jasperappio has made me in my OSS/Github work. I’ve been really impressed. Definitely nicer than email</p>&mdash; Misty (@mistydemeo) <a href="https://twitter.com/mistydemeo/status/778841101109080064">2016年9月22日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Just got told about <a href="https://twitter.com/jasperappio">@jasperappio</a>. As someone who does all work through issues and PRs, this is awesome.</p>&mdash; Joe Nash (@jna_sh) <a href="https://twitter.com/jna_sh/status/798283937344651264">2016年11月14日</a></blockquote>
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">社内に使ってる人がそこそこいるよ / “GitHub用のIssue Reader「Jasper」の開発を振り返ってみる - maru source” <a href="https://t.co/vhoCB262du">https://t.co/vhoCB262du</a></p>&mdash; Takafumi Ikeda (@ikeike443) <a href="https://twitter.com/ikeike443/status/808269733782896640">2016年12月12日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">今までそんなに多くのRepository管理してなくて問題に感じてなかったから気づかなかったんだけど、Jasper神では</p>&mdash; こにふぁー (@konifar) <a href="https://twitter.com/konifar/status/757749741622919168">2016年7月26日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperすごくいいんだけど、本音をいえばGitHub本体が提供してほしい機能ではある。</p>&mdash; FUJI Goro (@__gfx__) <a href="https://twitter.com/__gfx__/status/740400476894703617">2016年6月8日</a></blockquote>
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">昨日 <a href="https://t.co/KX3yMBQBux">https://t.co/KX3yMBQBux</a> の体験期間が過ぎてたので1日 Jasper 無しで生活してたんだけど厳しかった。他の GitHub Reader アプリっぽいのもいくつか眺めたり動かしてみたりしたけどしっくりこなく。というわけでポチッと課金。やっぱ楽だわ</p>&mdash; hogelog(東京) (@hogelog) <a href="https://twitter.com/hogelog/status/786056680224264192">2016年10月12日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper最高すぎる。使い勝手が良いのはそうなんだけど、ChromeのTabでGithub Issueとか開いててメモリガンガン消費みたいなこともなくなったのはでかい。</p>&mdash; だるま (@red_fat_daruma) <a href="https://twitter.com/red_fat_daruma/status/758338511187513344">2016年7月27日</a></blockquote>
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">めっちゃ便利でした <a href="https://twitter.com/hashtag/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0?src=hash">#はてなブログ</a><br>GithubのISSUEでなにやらやるなら、Jasperが便利だぞ！の話 - uzullaがブログ<a href="https://t.co/LUeCtyifkK">https://t.co/LUeCtyifkK</a> <a href="https://t.co/NG1yHuY3zB">pic.twitter.com/NG1yHuY3zB</a></p>&mdash; うずら (@uzulla) <a href="https://twitter.com/uzulla/status/752914088615751680">2016年7月12日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper、個人的に使っててとても重宝しててオススメですよという所感です <a href="https://twitter.com/hashtag/nodefest?src=hash">#nodefest</a></p>&mdash; nash (@nashcft) <a href="https://twitter.com/nashcft/status/797736638864441344">2016年11月13日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperめっちゃ便利だな。これはいいな。</p>&mdash; Yuki Kodama (@kuy) <a href="https://twitter.com/kuy/status/797604926742368256">2016年11月13日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperいいよ</p>&mdash; tenntennʕ ◔ϖ◔ʔ ==Go (@tenntenn) <a href="https://twitter.com/tenntenn/status/797600942887555072">2016年11月13日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">jasperを早速使い始めてお仕事１日目だけど、とてもとても良い気がしている。ブラウザでgithub開く機会がなくなりそうだ <a href="https://twitter.com/hashtag/nodefest?src=hash">#nodefest</a></p>&mdash; ゆいたゃん (@yui_tang) <a href="https://twitter.com/yui_tang/status/797975054386507777">2016年11月14日</a></blockquote>
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">トライアルが終わりJasper買ったけど良い。github issueを頻繁にアクセスしない、非エンジニアに特におすすめです。<a href="https://t.co/YVPQ9Rkt57">https://t.co/YVPQ9Rkt57</a></p>&mdash; tamasally (@tamasally) <a href="https://twitter.com/tamasally/status/779261224152215552">2016年9月23日</a></blockquote>
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">βテストさせてもらったけどとてもベンリなので是非 / &quot;JasperというGitHub Issue Readerを作りました&quot; <a href="https://t.co/ApU37sclsD">https://t.co/ApU37sclsD</a></p>&mdash; Naoki Hashimoto (@hashcc) <a href="https://twitter.com/hashcc/status/740392108490555392">2016年6月8日</a></blockquote>
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubから来る大量の通知メールのフィルタリングにお困りのデザイナーにも超オススメのMac/Windows Appが出ました / JasperというGitHub Issue Readerを作りました - maru source <a href="https://t.co/4RgmJtmC7z">https://t.co/4RgmJtmC7z</a></p>&mdash; transit_kix (@transit_kix) <a href="https://twitter.com/transit_kix/status/740352316914556928">2016年6月8日</a></blockquote>
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">これ最高ですからね、 early preview 版使ってます。 / “JasperというGitHub Issue Readerを作りました - maru source” <a href="https://t.co/WuKDRzaWa4">https://t.co/WuKDRzaWa4</a></p>&mdash; Yosuke FURUKAWA (@yosuke_furukawa) <a href="https://twitter.com/yosuke_furukawa/status/740341899236495361">2016年6月8日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper買ったけど、これすごいいいですね！メールだと自分がメンションされてるのしか来ないけど、Jasperで見ると誰が何に対してどのリポジトリのどのイシューで返してるってすぐわかってとても見やすい・・・</p>&mdash; meyco (@meyco) <a href="https://twitter.com/meyco/status/758818730683936768">2016年7月29日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">便利に使っています。<br>レビュー待ちの Pull Request の様子がよくわかるようになりましたー <a href="https://t.co/RFTLCmINig">https://t.co/RFTLCmINig</a></p>&mdash; Tatsuya Tsuruoka (@ttsuruoka) <a href="https://twitter.com/ttsuruoka/status/740557119372419072">2016年6月8日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">jasper使い始めたんだけどライフチェンジングだ。</p>&mdash; Masayoshi Michikawa (@michiomochi) <a href="https://twitter.com/michiomochi/status/740414718511316992">2016年6月8日</a></blockquote>
+      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper便利最高</p>&mdash; Hello (@rejasupotaro) <a href="https://twitter.com/rejasupotaro/status/740340044028858368">2016年6月8日</a></blockquote>
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubのIssue/PRリーダのJasperむっちゃいい<a href="https://t.co/b6NbuWUyHl">https://t.co/b6NbuWUyHl</a></p>&mdash; shimpeiws (@shimpeiws) <a href="https://twitter.com/shimpeiws/status/790367466744532996">2016年10月24日</a></blockquote>
     </div>
-  </article>
-
-  <article>
-    <div class="desc">
-      <h2>Stream</h2>
-      <p>
-        Jasper supports streaming - show issues in a particular repository, of a particular user, with a particular word, etc.
-        You can read active issues in GitHub.
-      </p>
-    </div>
-  </article>
-
-  <article>
-    <div class="desc">
-      <h2>Filter</h2>
-      <p>
-        Jasper supports powerful filtering - select unread issues, issues with a particular label, unassigned issues, etc.
-        You can easily and quickly find what you want to check out now.
-      </p>
-    </div>
-  </article>
-
-  <article>
-    <div class="desc">
-      <h2>Sort</h2>
-      <p>
-        Jasper supports powerful sorting - rearrange the order of issues by update date, read date, due date, etc.
-        You can read the issues you're most interested in.
-      </p>
-    </div>
-  </article>
-
-  <div class="more"> More information is available in the <a href="./doc.html">documentation</a> and <a href="./faq.html#articles">articles</a></div>
+  </div>
 </div>
+
 
 <!-- footer -->
 <footer>
