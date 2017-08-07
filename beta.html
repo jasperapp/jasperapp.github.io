@@ -59,6 +59,10 @@
       text-align: center;
       padding-top: 2em;
     }
+
+    .content article img {
+      box-shadow: none;
+    }
   </style>
 </head>
 
@@ -78,26 +82,59 @@
   </div>
 </nav>
 
-<div class="content not-available">
+<div class="content __not-available">
   <div class="downloads">
     <div class="download" title="Download for Mac">
-      <a href="https://github.com/jasperapp/jasper/releases/download/v0.2.4-beta.6/jasper_v0.2.4-beta.6_mac.zip">
+      <a href="https://github.com/jasperapp/jasper/releases/download/v0.4.0-beta.1/jasper_v0.4.0-beta.1_mac.zip">
         <div>Download for <img src="./image/logo-mac.png"></div>
       </a>
     </div>
 
     <div class="download" title="Download for Windows">
-      <a href="https://github.com/jasperapp/jasper/releases/download/v0.2.4-beta.6/jasper_v0.2.4-beta.6_windows.zip">
+      <a href="https://github.com/jasperapp/jasper/releases/download/v0.4.0-beta.1/jasper_v0.4.0-beta.1_windows.zip">
         <div>Download for <img src="./image/logo-windows.png"></div>
       </a>
     </div>
 
     <div class="download" title="Download for Linux">
-      <a href="https://github.com/jasperapp/jasper/releases/download/v0.2.4-beta.6/jasper_v0.2.4-beta.6_linux.zip">
+      <a href="https://github.com/jasperapp/jasper/releases/download/v0.4.0-beta.1/jasper_v0.4.0-beta.1_linux.zip">
         <div>Download for <img src="./image/logo-linux.png"></div>
       </a>
     </div>
   </div>
+
+  <article id="0-4-0-beta-1">
+    <h1><span>0.4.0-beta.1</span> <time>2017/8/8</time></h1>
+    <div class="changelog">
+      <p>Feat</p>
+      <a href="./image/v0.4.0/multi-account.png">
+        <img src="./image/v0.4.0/multi-account.png" height="70px"/>
+      </a>
+      <a href="./image/v0.4.0/multi-query.png">
+        <img src="./image/v0.4.0/multi-query.png" height="70px"/>
+      </a>
+      <a href="./image/v0.4.0/diff-body-mini.png">
+        <img src="./image/v0.4.0/diff-body-mini.png" height="70px"/>
+      </a>
+
+      <ul>
+        <li>Support multi account.</li>
+        <li>Support multi query at a stream</li>
+        <li>Display a difference of issue body</li>
+      </ul>
+
+      <p>Fix</p>
+      <ul>
+        <li>Using GitHub Enterprise with HTTP</li>
+        <li>Accented letter input</li>
+      </ul>
+
+      <p>Internal</p>
+      <ul>
+        <li>Update Electron to v1.6.11</li>
+      </ul>
+    </div>
+  </article>
 
   <article id="0-2-4-beta-6">
     <h1><span>0.2.4-beta.6</span> <time>2017/1/16</time></h1>
