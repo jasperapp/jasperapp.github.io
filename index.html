@@ -60,7 +60,7 @@
       position: absolute;
       width: 200px;
       left: 50%;
-      top: 77px;
+      top: 110px;
       margin-left: 220px;
     }
 
@@ -179,12 +179,14 @@
       <div class="download" id="download">
         <a href="#" class="js-track">
           <div>Download App</div>
-          <div class="notice">30-day Free Trial for <span id="platform"></span></div>
+          <!--<div class="notice"><span id="platform-mac">Mac</span> / <span id="platform-windows">Windows</span> / <span id="platform-linux">Linux</span></div>-->
+          <div class="notice"><span id="version"></span> for <span id="platform"></span></div>
         </a>
       </div>
 
       <script>
         var el = document.querySelector('#download');
+        var version = 'v0.5.0';
         if (navigator.platform.indexOf('Mac') !== -1) {
           el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.5.0/jasper_v0.5.0_mac.zip';
           el.querySelector('#platform').textContent = 'Mac';
@@ -195,23 +197,13 @@
           el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.5.0/jasper_v0.5.0_linux.zip';
           el.querySelector('#platform').textContent = 'Linux';
         }
+        el.querySelector('#version').textContent = version;
       </script>
 
       <div class="for-platforms">
         <a href="./release.html">Other Downloads</a>
         <span>/</span>
         <a href="./beta.html">Beta Downloads</a>
-      </div>
-    </div>
-
-    <div class="buy-license">
-      <a href="https://gum.co/jasper" class="js-track" target="_blank">
-        <div>Buy License $12</div>
-        <div class="notice">Mac / Windows / Linux</div>
-      </a>
-
-      <div class="important-notice-for-paid-users">
-        <a href="./release.html#0-2-0">Important notice for old app</a>
       </div>
     </div>
   </div>
