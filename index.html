@@ -185,15 +185,15 @@
 
       <script>
         var el = document.querySelector('#download');
-        var version = 'v0.7.2';
+        var version = 'v0.8.0';
         if (navigator.platform.indexOf('Mac') !== -1) {
-          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.7.2/jasper_v0.7.2_mac.zip';
+          el.querySelector('a').href = 'https://www.dropbox.com/s/zra1cy5y0ujpry0/jasper_v0.8.0_mac.zip?dl=1';
           el.querySelector('#platform').textContent = 'Mac';
         } else if (navigator.platform.indexOf('Win') !== -1) {
-          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.7.2/jasper_v0.7.2_windows.zip';
+          el.querySelector('a').href = 'https://www.dropbox.com/s/8hh3qn1c1ltubeq/jasper_v0.8.0_windows.zip?dl=1';
           el.querySelector('#platform').textContent = 'Windows';
         } else if (navigator.platform.indexOf('Linux') !== -1) {
-          el.querySelector('a').href = 'https://github.com/jasperapp/jasper/releases/download/v0.7.2/jasper_v0.7.2_linux.zip';
+          el.querySelector('a').href = 'https://www.dropbox.com/s/il6ehhmgscerc2d/jasper_v0.8.0_linux.zip?dl=1';
           el.querySelector('#platform').textContent = 'Linux';
         }
         el.querySelector('#version').textContent = version;
