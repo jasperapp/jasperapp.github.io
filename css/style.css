@@ -151,10 +151,11 @@ header {
   text-align: center;
 }
 
-.download a,
-.buy-license a {
+a.download {
   font-size: 1.1em;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.5em 0;
   border-radius: 2px;
   font-weight: bold;
@@ -164,8 +165,7 @@ header {
   background: rgba(255, 65, 124, 0.85);
 }
 
-.downloads .notice,
-.buy-license .notice {
+.downloads .notice {
   font-size: 0.6em;
   font-weight: normal;
   color: #ffdcf2;
@@ -205,6 +205,20 @@ footer img {
 
 footer a {
   color: #aaa;
+}
+
+.mdi {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.mdi.large {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
 }
 
 /* see photon */
