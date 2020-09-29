@@ -176,25 +176,24 @@
   <div>
     <div class="downloads">
 
-      <div class="download" id="download">
-        <a href="#" class="js-track">
+      <a class="download js-track" id="download" href="#">
+        <div>
           <div>Download App</div>
-          <!--<div class="notice"><span id="platform-mac">Mac</span> / <span id="platform-windows">Windows</span> / <span id="platform-linux">Linux</span></div>-->
           <div class="notice"><span id="version"></span> for <span id="platform"></span></div>
-        </a>
-      </div>
+        </div>
+      </a>
 
       <script>
-        var el = document.querySelector('#download');
-        var version = 'v0.9.3';
+        const el = document.querySelector('#download');
+        const version = 'v0.9.3';
         if (navigator.platform.indexOf('Mac') !== -1) {
-          el.querySelector('a').href = 'https://www.dropbox.com/s/bpvvbtjnczdq11h/jasper_v0.9.3_mac.zip?dl=1';
+          el.href = 'https://www.dropbox.com/s/bpvvbtjnczdq11h/jasper_v0.9.3_mac.zip?dl=1';
           el.querySelector('#platform').textContent = 'Mac';
         } else if (navigator.platform.indexOf('Win') !== -1) {
-          el.querySelector('a').href = 'https://www.dropbox.com/s/dd6tuk67d5brcdt/jasper_v0.9.3_windows.zip?dl=1';
+          el.href = 'https://www.dropbox.com/s/dd6tuk67d5brcdt/jasper_v0.9.3_windows.zip?dl=1';
           el.querySelector('#platform').textContent = 'Windows';
         } else if (navigator.platform.indexOf('Linux') !== -1) {
-          el.querySelector('a').href = 'https://www.dropbox.com/s/crshkn05mr4asuo/jasper_v0.9.3_linux.zip?dl=1';
+          el.href = 'https://www.dropbox.com/s/crshkn05mr4asuo/jasper_v0.9.3_linux.zip?dl=1';
           el.querySelector('#platform').textContent = 'Linux';
         }
         el.querySelector('#version').textContent = version;
