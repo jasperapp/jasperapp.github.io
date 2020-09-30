@@ -27,15 +27,45 @@
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <style>
     .content {
-      max-width: 1200px;
+      max-width: 980px;
       display: flex;
       border-top: 1px solid #ddd;
       padding-top: 2em;
       flex-flow: row wrap;
     }
 
-    .content {
-      max-width: 980px;
+    header {
+      position: relative;
+      padding: 3em 0 8em;
+      text-align: center;
+      /*background: #86B0CE;*/
+      background: #1c3e73;
+      /*background: #4C3852;*/
+      border-top: solid 1px #fff;
+      /*color: white;*/
+    }
+
+    .eye-catch {
+      position: relative;
+      text-align: center;
+    }
+
+    .eye-catch img{
+      max-width: 1024px;
+      margin: -7em auto 0;
+    }
+
+    @media (max-width: 1024px) {
+      .eye-catch img{
+        max-width: 800px;
+      }
+    }
+
+    .overview {
+      width: 500px;
+      margin: auto auto 2em;
+      font-size: 1.2em;
+      text-align: center;
     }
 
     .downloads {
@@ -54,7 +84,9 @@
       font-family: Menlo, Consolas, 'Courier New', Courier, Monaco, monospace;
       font-size: 0.9em;
       position: relative;
-      padding-left: 4.5em;
+      display: flex;
+      justify-content: center;
+      align-content: center;
     }
 
     .stream-sample .label {
@@ -63,8 +95,7 @@
       padding: 0.1em 0.5em;
       background: #214b8c;
       font-size: 0.85em;
-      position: absolute;
-      left: 1.5em;
+      margin-right: 1em;
     }
 
     .features {

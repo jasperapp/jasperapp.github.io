@@ -8,6 +8,12 @@
     /* hack: スマホのchromeでサイトを見ると、横幅が780px以上の要素のフォントサイズが倍になってしまう不具合を回避する */
     max-height: 100%;
   }
+  .content {
+    max-width: 800px;
+  }
+  nav > div {
+    max-width: 800px;
+  }
 }
 
 body {
@@ -29,61 +35,18 @@ ul {
   list-style: none;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: solid 1px #ddd;
-}
-
-tr:nth-child(even) {
-  background: #eee;
-}
-
-tr:first-child {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-
-td {
-  padding: 0.25em 0.5em;
-  /*border: solid 1px #aaa;*/
-}
-
 p {
   padding: 0.5em 0;
 }
 
-kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: solid 1px #c6cbd1;
-  border-bottom-color: #959da5;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #959da5;
-  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-
 nav {
   padding: 0.5em 0;
-  /*background: #545454;*/
-  /*background: #4C3852;*/
-  /*background: #426075;*/
 }
 
 nav > div {
   display: flex;
   max-width: 980px;
   margin: auto;
-}
-
-@media (max-width: 1024px) {
-  nav > div {
-    max-width: 800px;
-  }
 }
 
 nav > div .stretch {
@@ -97,50 +60,6 @@ nav a {
 
 nav a:first-child {
   padding: 0;
-}
-
-nav .github,
-nav .twitter {
-  width: 20px;
-  vertical-align: middle;
-}
-
-header {
-  position: relative;
-  padding: 3em 0 8em;
-  text-align: center;
-  /*background: #86B0CE;*/
-  background: #1c3e73;
-  /*background: #4C3852;*/
-  border-top: solid 1px #fff;
-  /*color: white;*/
-}
-
-.eye-catch {
-  position: relative;
-  text-align: center;
-}
-
-.eye-catch img{
-  max-width: 1024px;
-  margin: -7em auto 0;
-}
-
-@media (max-width: 1024px) {
-  .eye-catch img{
-    max-width: 800px;
-  }
-}
-
-.overview {
-  width: 500px;
-  margin: auto auto 2em;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.overview h2 {
-  text-align: center;
 }
 
 a.download {
@@ -166,17 +85,6 @@ a.download {
 .content {
   max-width: 980px;
   margin: 0 auto 4em;
-}
-
-@media (max-width: 1024px) {
-  .content {
-    max-width: 800px;
-  }
-}
-
-.content article img {
-  max-width: 300px;
-  box-shadow: 4px 4px 10px #aaa;
 }
 
 footer {
@@ -212,4 +120,3 @@ footer a {
   height: 36px;
   line-height: 36px;
 }
-
