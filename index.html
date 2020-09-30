@@ -120,22 +120,30 @@
     }
 
     .users {
-      text-align: center;
       width: 100%;
       margin-top: 3em;
       border-top: solid 1px #ddd;
       padding-top: 2em;
+      text-align: center;
     }
 
-    .users .users-inner {
-      width: 500px;
-      height: 600px;
-      overflow: scroll;
-      display: inline-block;
-      border: solid 1px #ddd;
-      border-radius: 0.5em;
-      padding: 1em;
-      background: #efefef;
+    .users .tweets {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 1em;
+    }
+
+    .users .tweets .twitter-tweet {
+      width: 49% !important;
+    }
+
+    .users .tweets .twitter-tweet:not(.twitter-tweet-rendered) {
+      border: solid 1px #4078c0;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      padding: 8px;
+      box-sizing: border-box;
     }
 
   </style>
@@ -280,8 +288,8 @@
   </div>
 
   <div class="users">
-    <p>Hundreds of developers are using Jasper in a business/OSS activity. <br/>And it is also used by several people in GitHub inc.</p>
-    <div class="users-inner">
+    <div>Hundreds of developers are using Jasper in a business/OSS activity. And it is also used by several people in GitHub inc.</div>
+    <div class="tweets">
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">I’m amazed how much more productive @ jasperappio has made me in my OSS/Github work. I’ve been really impressed. Definitely nicer than email</p>&mdash; Misty (@mistydemeo) <a href="https://twitter.com/mistydemeo/status/778841101109080064">2016年9月22日</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Just got told about <a href="https://twitter.com/jasperappio">@jasperappio</a>. As someone who does all work through issues and PRs, this is awesome.</p>&mdash; Joe Nash (@jna_sh) <a href="https://twitter.com/jna_sh/status/798283937344651264">2016年11月14日</a></blockquote>
       <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">社内に使ってる人がそこそこいるよ / “GitHub用のIssue Reader「Jasper」の開発を振り返ってみる - maru source” <a href="https://t.co/vhoCB262du">https://t.co/vhoCB262du</a></p>&mdash; Takafumi Ikeda (@ikeike443) <a href="https://twitter.com/ikeike443/status/808269733782896640">2016年12月12日</a></blockquote>
@@ -290,9 +298,9 @@
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">jasperを早速使い始めてお仕事１日目だけど、とてもとても良い気がしている。ブラウザでgithub開く機会がなくなりそうだ <a href="https://twitter.com/hashtag/nodefest?src=hash">#nodefest</a></p>&mdash; ゆいたゃん (@yui_tang) <a href="https://twitter.com/yui_tang/status/797975054386507777">2016年11月14日</a></blockquote>
       <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubから来る大量の通知メールのフィルタリングにお困りのデザイナーにも超オススメのMac/Windows Appが出ました / JasperというGitHub Issue Readerを作りました - maru source <a href="https://t.co/4RgmJtmC7z">https://t.co/4RgmJtmC7z</a></p>&mdash; transit_kix (@transit_kix) <a href="https://twitter.com/transit_kix/status/740352316914556928">2016年6月8日</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper買ったけど、これすごいいいですね！メールだと自分がメンションされてるのしか来ないけど、Jasperで見ると誰が何に対してどのリポジトリのどのイシューで返してるってすぐわかってとても見やすい・・・</p>&mdash; meyco (@meyco) <a href="https://twitter.com/meyco/status/758818730683936768">2016年7月29日</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">スター14000の巨大OSSのメンテナーになると、一瞬でGitHubのフィードが埋まってしまう。unwatchしてJasperで管理するしかないしJasper最高</p>&mdash; ぎぎにゃん (@giginet) <a href="https://twitter.com/giginet/status/839153061150928896">2017年3月7日</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperが俺みたいに立場上めっちゃPR見なければいかん人間にとってめっちゃ便利だな。良くOSS側のPRとか取り零してるが、これで割とすぐ確認できそう。</p>&mdash; 夜行性のフレンズ じょーかー (@joker1007) <a href="https://twitter.com/joker1007/status/840109623919104000">2017年3月10日</a></blockquote>
       <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubのIssue/PRリーダーのJasper開発者の方によるJasperの活用方法の紹介。Jasper本当に便利なので頑張って欲しいし会社の標準にしたいくらい。 / “ストレスフリーなGitHubのIssue生活 - ク…” <a href="https://t.co/tovpyElq4D">https://t.co/tovpyElq4D</a></p>&mdash; uenot (@braitom) <a href="https://twitter.com/braitom/status/841638889953538048">2017年3月14日</a></blockquote>
+      <!--    <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">スター14000の巨大OSSのメンテナーになると、一瞬でGitHubのフィードが埋まってしまう。unwatchしてJasperで管理するしかないしJasper最高</p>&mdash; ぎぎにゃん (@giginet) <a href="https://twitter.com/giginet/status/839153061150928896">2017年3月7日</a></blockquote>-->
       <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper、設定せずに持て余してたけど、自分が見るべきイシューとプルリクを定義してちゃんと設定したら最高になったので、チームメンバーに共有しておきました。</p>&mdash; ひさいち (@hisaichi5518) <a href="https://twitter.com/hisaichi5518/status/841646391873036289">2017年3月14日</a></blockquote>-->
       <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">ESDoc もだけど、この方のつくるアプリは着眼点に加えて外観も練られており気に入っている。常用するツールだからこそ外観は重要。 / “ストレスフリーなGitHubのIssue生活 - クックパッド開発者ブログ” <a href="https://t.co/hJB2Htotga">https://t.co/hJB2Htotga</a></p>&mdash; アカベコ (@akabekobeko) <a href="https://twitter.com/akabekobeko/status/841636626325368833">2017年3月14日</a></blockquote>-->
       <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperすごくいいんだけど、本音をいえばGitHub本体が提供してほしい機能ではある。</p>&mdash; FUJI Goro (@__gfx__) <a href="https://twitter.com/__gfx__/status/740400476894703617">2016年6月8日</a></blockquote>-->
