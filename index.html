@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
   <title>Jasper - A flexible and powerful issue reader for GitHub</title>
   <meta property="og:url" content="https://jasperapp.io/">
   <meta property="og:site_name" content="Jasper">
@@ -55,12 +56,6 @@
       margin: -7em auto 0;
     }
 
-    @media (max-width: 1024px) {
-      .eye-catch img{
-        max-width: 800px;
-      }
-    }
-
     .overview {
       width: 500px;
       margin: auto auto 2em;
@@ -83,10 +78,7 @@
       text-align: center;
       font-family: Menlo, Consolas, 'Courier New', Courier, Monaco, monospace;
       font-size: 0.9em;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-content: center;
+      padding: 8px;
     }
 
     .stream-sample .label {
@@ -95,7 +87,6 @@
       padding: 0.1em 0.5em;
       background: #214b8c;
       font-size: 0.85em;
-      margin-right: 1em;
     }
 
     .features {
@@ -177,6 +168,35 @@
       box-sizing: border-box;
     }
 
+    @media (max-width: 1024px) {
+      .eye-catch img{
+        max-width: 100%;
+      }
+
+      .overview {
+        padding: 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      header .downloads {
+        position: static;
+        margin: 10px auto 0;
+      }
+
+      .overview .stream-sample {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .features .feature {
+        width: 100%;
+      }
+
+      .users .tweets .twitter-tweet {
+        width: 100% !important;
+      }
+    }
   </style>
 </head>
 
