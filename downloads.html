@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
   <title>Jasper - A flexible and powerful issue reader for GitHub</title>
   <meta property="og:url" content="https://jasperapp.io/">
   <meta property="og:site_name" content="Jasper">
@@ -29,6 +30,16 @@
     .content article img {
       max-width: 300px;
       box-shadow: 4px 4px 10px #aaa;
+    }
+
+    @media (max-width: 1024px) {
+      .downloads {
+        display: block;
+      }
+
+      .downloads .download {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
