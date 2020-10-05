@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
   <title>Jasper - A flexible and powerful issue reader for GitHub</title>
   <meta property="og:url" content="https://jasperapp.io/">
   <meta property="og:site_name" content="Jasper">
@@ -25,6 +26,22 @@
   <link rel="stylesheet" href="./css/style.css"/>
   <link rel="stylesheet" href="./css/release.css"/>
   <link rel="stylesheet" href="./css/materialdesignicons.css"/>
+  <style>
+    .content article img {
+      max-width: 300px;
+      box-shadow: 4px 4px 10px #aaa;
+    }
+
+    @media (max-width: 1024px) {
+      .downloads {
+        display: block;
+      }
+
+      .downloads .download {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -33,26 +50,26 @@
   <div>
     <a href="/">Jasper</a>
     <span class="stretch"></span>
-    <a href="./doc.html">Documentation</a>
+    <a href="https://docs.jasperapp.io/">Docs</a>
     <a href="./release.html">Releases</a>
-    <a href="./beta.html">Beta</a>
-    <a href="./faq.html">FAQ</a>
-    <a href="https://twitter.com/h13i32maru"><span class="mdi mdi-twitter"></span></a>
-    <a href="https://github.com/jasperapp/jasper"><span class="mdi mdi-github"></span></a>
+    <a href="https://twitter.com/hashtag/jasperapp" target="_blank"><span class="mdi mdi-pound"></span></a>
+    <a href="https://twitter.com/h13i32maru" target="_blank"><span class="mdi mdi-twitter"></span></a>
+    <a href="https://github.com/jasperapp/jasper" target="_blank"><span class="mdi mdi-github"></span></a>
+    <a href="https://h13i32maru.jp/supporter/" target="_blank"><span class="mdi mdi-gift"></span></a>
   </div>
 </nav>
 
 <div class="content">
   <div class="downloads">
-    <a class="download js-track" title="Download for mac" href="https://www.dropbox.com/s/bpvvbtjnczdq11h/jasper_v0.9.3_mac.zip?dl=1">
+    <a class="download js-track" title="Download for mac" href="https://www.dropbox.com/s/r731omdgun8uowb/jasper_v1.0.0_mac.zip?dl=1">
       <span>Download for</span><span class="mdi mdi-apple large"></span>
     </a>
 
-    <a class="download js-track" title="Download for Windows" href="https://www.dropbox.com/s/dd6tuk67d5brcdt/jasper_v0.9.3_windows.zip?dl=1">
+    <a class="download js-track" title="Download for Windows" href="https://www.dropbox.com/s/90zrg8r0vk86j0k/jasper_v1.0.0_windows_setup.exe?dl=1">
       <span>Download for</span><span class="mdi mdi-microsoft-windows large"></span>
     </a>
 
-    <a class="download js-track" title="Download for Linux" href="https://www.dropbox.com/s/crshkn05mr4asuo/jasper_v0.9.3_linux.zip?dl=1">
+    <a class="download js-track" title="Download for Linux" href="https://www.dropbox.com/s/exk6vtdq00ksy6x/jasper_v1.0.0_linux.zip?dl=1">
       <span>Download for</span><span class="mdi mdi-linux large"></span>
     </a>
   </div>

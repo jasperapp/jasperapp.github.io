@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
   <title>Jasper - A flexible and powerful issue reader for GitHub</title>
   <meta property="og:url" content="https://jasperapp.io/">
   <meta property="og:site_name" content="Jasper">
@@ -27,34 +28,39 @@
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <style>
     .content {
-      max-width: 1200px;
+      max-width: 980px;
       display: flex;
       border-top: 1px solid #ddd;
       padding-top: 2em;
       flex-flow: row wrap;
     }
 
-    h2 {
+    header {
+      position: relative;
+      padding: 3em 0 8em;
+      text-align: center;
+      /*background: #86B0CE;*/
+      background: #1c3e73;
+      /*background: #4C3852;*/
+      border-top: solid 1px #fff;
+      /*color: white;*/
+    }
+
+    .eye-catch {
+      position: relative;
       text-align: center;
     }
 
-    .content {
-      max-width: 780px;
+    .eye-catch img{
+      max-width: 1024px;
+      margin: -7em auto 0;
     }
 
-    .content article {
-      box-sizing: border-box;
-      padding: 1em;
-      flex: 1 50%;
-    }
-
-    .content article .desc {
-      height: 10em;
-    }
-
-    .content article img {
-      /*max-width: 90%;*/
-      margin-top: 1em;
+    .overview {
+      width: 500px;
+      margin: auto auto 2em;
+      font-size: 1.2em;
+      text-align: center;
     }
 
     .downloads {
@@ -65,26 +71,6 @@
       margin-left: 220px;
     }
 
-    .downloads .for-platforms * {
-      font-size: 0.75em;
-      color: #eee;
-    }
-
-    .buy-license {
-      position: absolute;
-      width: 200px;
-      left: 50%;
-      top: 185px;
-      margin-left: 220px;
-    }
-
-    .buy-license .important-notice-for-paid-users a {
-      background: none;
-      font-size: 0.75em;
-      color: #eee;
-      font-weight: normal;
-    }
-
     .stream-sample {
       background: #214b8c;
       color: #fff;
@@ -92,8 +78,7 @@
       text-align: center;
       font-family: Menlo, Consolas, 'Courier New', Courier, Monaco, monospace;
       font-size: 0.9em;
-      position: relative;
-      padding-left: 4.5em;
+      padding: 8px;
     }
 
     .stream-sample .label {
@@ -102,53 +87,116 @@
       padding: 0.1em 0.5em;
       background: #214b8c;
       font-size: 0.85em;
-      position: absolute;
-      left: 2em;
     }
 
-    .compare-table {
-      width: auto;
-      margin: auto;
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
-    .compare-table thead tr {
-      background: #444;
-      color: #eee;
+    .features .feature {
+      width: 49%;
+      /*border: solid 1px #214b8c;*/
+      /*border: solid 1px #DC407B;*/
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 8px;
+      margin-bottom: 24px;
     }
 
-    .compare-table .note {
-      font-style: italic;
+    .feature .feature-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      /*color: #214b8c;*/
+      color:#DC407B;
+      font-weight: bold;
+      border-bottom: solid 1px #DC407B;
+    }
+
+    .feature-title .mdi {
+      margin-right: 8px;
+    }
+
+    .feature .feature-desc {
+      padding-top: 8px;
+    }
+
+    .feature .feature-details {
       font-size: 0.8em;
-      color: #888;
+      color: #666666;
     }
 
-    .compare-table tbody {
-      line-height: 1.5em;
+    .feature-desc img {
+      margin-top: 8px;
+      max-width: 100%;
+      border: solid 1px #dddddd;
+      border-radius: 4px;
+    }
+
+    .code {
+      background: #eeeeee;
+      padding: 2px 4px;
+      border-radius: 4px;
     }
 
     .users {
-      text-align: center;
       width: 100%;
       margin-top: 3em;
       border-top: solid 1px #ddd;
       padding-top: 2em;
+      text-align: center;
     }
 
-    .users twitterwidget {
-      margin: auto;
+    .users .tweets {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 1em;
     }
 
-    .users .users-inner {
-      width: 500px;
-      height: 600px;
-      overflow: scroll;
-      display: inline-block;
-      border: solid 1px #ddd;
-      border-radius: 0.5em;
-      padding: 1em;
-      background: #efefef;
+    .users .tweets .twitter-tweet {
+      width: 49% !important;
     }
 
+    .users .tweets .twitter-tweet:not(.twitter-tweet-rendered) {
+      border: solid 1px #4078c0;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 1024px) {
+      .eye-catch img{
+        max-width: 100%;
+      }
+
+      .overview {
+        padding: 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      header .downloads {
+        position: static;
+        margin: 10px auto 0;
+      }
+
+      .overview .stream-sample {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .features .feature {
+        width: 100%;
+      }
+
+      .users .tweets .twitter-tweet {
+        width: 100% !important;
+      }
+    }
   </style>
 </head>
 
@@ -159,12 +207,12 @@
   <div>
     <a href="/">Jasper</a>
     <span class="stretch"></span>
-    <a href="./doc.html">Documentation</a>
+    <a href="https://docs.jasperapp.io/">Docs</a>
     <a href="./release.html">Releases</a>
-    <a href="./beta.html">Beta</a>
-    <a href="./faq.html">FAQ</a>
-    <a href="https://twitter.com/h13i32maru"><span class="mdi mdi-twitter"></span></a>
-    <a href="https://github.com/jasperapp/jasper"><span class="mdi mdi-github"></span></a>
+    <a href="https://twitter.com/hashtag/jasperapp" target="_blank"><span class="mdi mdi-pound"></span></a>
+    <a href="https://twitter.com/h13i32maru" target="_blank"><span class="mdi mdi-twitter"></span></a>
+    <a href="https://github.com/jasperapp/jasper" target="_blank"><span class="mdi mdi-github"></span></a>
+    <a href="https://h13i32maru.jp/supporter/" target="_blank"><span class="mdi mdi-gift"></span></a>
   </div>
 </nav>
 
@@ -187,67 +235,113 @@
         const el = document.querySelector('#download');
         const version = 'v0.9.3';
         if (navigator.platform.indexOf('Mac') !== -1) {
-          el.href = 'https://www.dropbox.com/s/bpvvbtjnczdq11h/jasper_v0.9.3_mac.zip?dl=1';
+          el.href = 'https://www.dropbox.com/s/r731omdgun8uowb/jasper_v1.0.0_mac.zip?dl=1';
           el.querySelector('#platform').textContent = 'Mac';
         } else if (navigator.platform.indexOf('Win') !== -1) {
-          el.href = 'https://www.dropbox.com/s/dd6tuk67d5brcdt/jasper_v0.9.3_windows.zip?dl=1';
+          el.href = 'https://www.dropbox.com/s/90zrg8r0vk86j0k/jasper_v1.0.0_windows_setup.exe?dl=1';
           el.querySelector('#platform').textContent = 'Windows';
         } else if (navigator.platform.indexOf('Linux') !== -1) {
-          el.href = 'https://www.dropbox.com/s/crshkn05mr4asuo/jasper_v0.9.3_linux.zip?dl=1';
+          el.href = 'https://www.dropbox.com/s/exk6vtdq00ksy6x/jasper_v1.0.0_linux.zip?dl=1';
           el.querySelector('#platform').textContent = 'Linux';
         }
         el.querySelector('#version').textContent = version;
       </script>
-
-      <div class="for-platforms">
-        <a href="./release.html">Other Downloads</a>
-        <span>/</span>
-        <a href="./beta.html">Beta Downloads</a>
-      </div>
     </div>
   </div>
 </header>
 
 <!-- eye catch image -->
 <div class="eye-catch">
-  <img src="./image/ss.png"/>
+  <img src="image/top/ss.png"/>
 </div>
 
 <div class="overview" id="overview">
   <p>
     You will be able to read, track and discover many active issues very flexibly by using Jasper in GitHub.
-    It is enabled by a powerful function called "stream" of Jasper.
+    It is enabled by a powerful function called "Stream" of Jasper.
   </p>
   <p class="stream-sample">
     <span class="label">example</span>
-    <span>org:electron is:issue label:bug</span>
+    <span>repo:nodejs/node is:issue label:bug</span>
   </p>
 </div>
 
 <!-- content -->
 <div class="content">
-  <table class="compare-table">
-    <caption>A tracking condition comparison Jasper(<a href="./doc.html#stream">streams</a>) and GitHub(<a href="https://help.github.com/articles/about-noble claion-emails/">email</a>)</caption>
-    <thead>
-    <tr><td>Tracking conditions</td><td>Jasper</td><td>GitHub</td></tr>
-    </thead>
-    <tbody>
-    <tr><td>Repositories <br><span class="note">belongs to organizations or users</span></td><td>Any repositories</td><td>Any repositories</td></tr>
-    <tr><td>State <br/><span class="note">open, closed, approved and request changed</span></td><td>Any state</td><td>Only related to myself</td></tr>
-    <tr><td>Involves <br/><span class="note">assignees, authors, mentions, and comments</span></td><td>Any users</td><td>Only related to myself</td></tr>
-    <tr><td>Team Mentions <br/><span class="note">accessible teams</span></td><td>Any teams</td><td>Only related to my teams</td></tr>
-    <tr><td>Organizations <br><span class="note">organizations and users</span></td><td>Any organizations</td><td>-</td></tr>
-    <tr><td>Labels <br/><span class="note">bug, enhancement, invalid and more</span></td><td>Any labels</td><td>-</td></tr>
-    <tr><td>Milestones <br/><span class="note">v0.1.0 and v1.0.0 and v2.0.0-alpha and more</span></td><td>Any milestones</td><td>-</td></tr>
-    <tr><td>Language <br/><span class="note">JavaScript, Ruby, Go and more</span></td><td>Any language</td><td>-</td></tr>
-    <tr><td>Type <br/><span class="note">issue and/or pull request</span></td><td>Any types</td><td>-</td></tr>
-    <tr><td>Egosurfing <br/><span class="note">own libraries and like tools and more</span></td><td>Any words</td><td>-</td></tr>
-    </tbody>
-  </table>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-title"><span class="mdi mdi-lightning-bolt"></span>Stream</div>
+      <div class="feature-desc">
+        You can use the <a href="https://docs.github.com/en/free-pro-team@latest/github/searching-for-information-on-github/searching-issues-and-pull-requests">GitHub Search</a>
+        query to create various criteria, such as <span class="code">issues I created</span>, <span class="code">pull requests of nodejs/node</span>,
+        <span class="code">bug labeled issues</span>, etc. to view issues and receive update notifications.
+        <span class="feature-details">Details are <a href="https://docs.jasperapp.io/usecase/query">here</a> or <a href="https://docs.jasperapp.io/usecase/query">ja</a>.</span>
+        <!--        GitHub Searchクエリを使って「自分が作成したissue」「nodejs/nodeのpr」「bugラベルがついたissue」など、様々な条件を作成して、issueを閲覧したり更新通知を受け取ることができます-->
+        <br/>
+        <img src="./image/top/stream_editor.png"/>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-title"><span class="mdi mdi-clipboard-check"></span>Unread Management</div>
+      <div class="feature-desc">
+        In addition to unread issues, unread issue comments and review comments are highlighted in a clear and easy to understand manner.
+        Unread comments are also displayed on a mini-map to help you keep track of the entire issue.
+        <span class="feature-details">Details are <a href="https://docs.jasperapp.io/usecase/browse">here</a> or <a href="https://docs.jasperapp.io/v/ja/usecase/browse">ja</a>.</span>
+<!--        未読のissueだけでなく、未読のissueコメントやレビューコメントも分かりやすくハイライトされます。また、未読コメントはミニマップ表示され、issue全体を把握しやすくなります。-->
+        <img src="./image/top/highlight_comment.png"/>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-title"><span class="mdi mdi-information"></span>Issues/PRs Information</div>
+      <div class="feature-desc">
+        Quickly see the issue's open/close, label, milestones and assignments.
+        It also shows the review status of the pull request (approved, request changed, commented) along with the reviewer.
+<!--        issueのopen/close、ラベル、マイルストーン、アサインなどがひと目でわかります。またプルリクエストのレビュー状況(approve, change, comment)をレビュアーと一緒に表示します。-->
+        <img src="./image/top/issue_info.png">
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-title"><span class="mdi mdi-magnify"></span>Searching</div>
+      <div class="feature-desc">
+        You can search for locally stored issues with a subset of the GitHub Search query.
+        In addition to searching for issues, this can also be used for navigation within Jasper.
+        <span class="feature-details">Details are <a href="https://docs.jasperapp.io/usecase/search">here</a> or <a href="https://docs.jasperapp.io/v/ja/usecase/search">ja</a>.</span>
+<!--        ローカルに保存したissueを素早く検索することができます。検索にはGitHub Search クエリのサブセットを使うことができます。また、issueの検索だけではなく、Jasper内のナビゲーションとしても使えます。-->
+        <img src="./image/top/search.png">
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-title"><span class="mdi mdi-github"></span>Integration with GitHub Features</div>
+      <div class="feature-desc">
+        Integration with GitHub Notifications allows issues viewed on your smartphone to be synced to Jasper.
+        Alternatively, you can integrate with GitHub Projects to use the Project Board (Kanban) in Jasper.
+        You can also integrate with team and watching.
+        <span class="feature-details">Details are <a href="https://docs.jasperapp.io/usecase/advanced">here</a> or <a href="https://docs.jasperapp.io/v/ja/usecase/advanced">ja</a>.</span>
+<!--        GitHub Notificationと連携することによりスマートフォンで閲覧したissueがJasperにも同期されます。そのほかにもGitHub  Projectsと連携することでJasperでプロジェクトボード(Kanban)を使えます。そのほか team, watchingと連携することもできます。-->
+        <img src="./image/top/github-projects.png">
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-title"><span class="mdi mdi-keyboard"></span>Keyboard Shortcuts</div>
+      <div class="feature-desc">
+        You can do a variety of things with just your keyboard, including moving through the issue list, browsing, viewing unread, and saving bookmarks.
+        Keyboard shortcuts can also be customized (Mac only).
+        <span class="feature-details">Details are <a href="https://docs.jasperapp.io/usecase/keyboard">here</a> or <a href="https://docs.jasperapp.io/v/ja/usecase/keyboard">ja</a>.</span>
+<!--        キーボードだけでissueリストの移動、閲覧、未読表示、ブックマーク保存など、様々なことができます。キーボードショートカットはカスタマイズも可能です(Macのみ)。-->
+        <img src="./image/top/keyboard.png">
+      </div>
+    </div>
+  </div>
 
   <div class="users">
-    <p>Hundreds of developers are using Jasper in a business/OSS activity. <br/>And it is also used by several people in GitHub inc.</p>
-    <div class="users-inner">
+    <div>Hundreds of developers are using Jasper in a business/OSS activity. And it is also used by several people in GitHub inc.</div>
+    <div class="tweets">
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">I’m amazed how much more productive @ jasperappio has made me in my OSS/Github work. I’ve been really impressed. Definitely nicer than email</p>&mdash; Misty (@mistydemeo) <a href="https://twitter.com/mistydemeo/status/778841101109080064">2016年9月22日</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Just got told about <a href="https://twitter.com/jasperappio">@jasperappio</a>. As someone who does all work through issues and PRs, this is awesome.</p>&mdash; Joe Nash (@jna_sh) <a href="https://twitter.com/jna_sh/status/798283937344651264">2016年11月14日</a></blockquote>
       <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">社内に使ってる人がそこそこいるよ / “GitHub用のIssue Reader「Jasper」の開発を振り返ってみる - maru source” <a href="https://t.co/vhoCB262du">https://t.co/vhoCB262du</a></p>&mdash; Takafumi Ikeda (@ikeike443) <a href="https://twitter.com/ikeike443/status/808269733782896640">2016年12月12日</a></blockquote>
@@ -256,10 +350,10 @@
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">jasperを早速使い始めてお仕事１日目だけど、とてもとても良い気がしている。ブラウザでgithub開く機会がなくなりそうだ <a href="https://twitter.com/hashtag/nodefest?src=hash">#nodefest</a></p>&mdash; ゆいたゃん (@yui_tang) <a href="https://twitter.com/yui_tang/status/797975054386507777">2016年11月14日</a></blockquote>
       <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubから来る大量の通知メールのフィルタリングにお困りのデザイナーにも超オススメのMac/Windows Appが出ました / JasperというGitHub Issue Readerを作りました - maru source <a href="https://t.co/4RgmJtmC7z">https://t.co/4RgmJtmC7z</a></p>&mdash; transit_kix (@transit_kix) <a href="https://twitter.com/transit_kix/status/740352316914556928">2016年6月8日</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper買ったけど、これすごいいいですね！メールだと自分がメンションされてるのしか来ないけど、Jasperで見ると誰が何に対してどのリポジトリのどのイシューで返してるってすぐわかってとても見やすい・・・</p>&mdash; meyco (@meyco) <a href="https://twitter.com/meyco/status/758818730683936768">2016年7月29日</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">スター14000の巨大OSSのメンテナーになると、一瞬でGitHubのフィードが埋まってしまう。unwatchしてJasperで管理するしかないしJasper最高</p>&mdash; ぎぎにゃん (@giginet) <a href="https://twitter.com/giginet/status/839153061150928896">2017年3月7日</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperが俺みたいに立場上めっちゃPR見なければいかん人間にとってめっちゃ便利だな。良くOSS側のPRとか取り零してるが、これで割とすぐ確認できそう。</p>&mdash; 夜行性のフレンズ じょーかー (@joker1007) <a href="https://twitter.com/joker1007/status/840109623919104000">2017年3月10日</a></blockquote>
       <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubのIssue/PRリーダーのJasper開発者の方によるJasperの活用方法の紹介。Jasper本当に便利なので頑張って欲しいし会社の標準にしたいくらい。 / “ストレスフリーなGitHubのIssue生活 - ク…” <a href="https://t.co/tovpyElq4D">https://t.co/tovpyElq4D</a></p>&mdash; uenot (@braitom) <a href="https://twitter.com/braitom/status/841638889953538048">2017年3月14日</a></blockquote>
-<!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper、設定せずに持て余してたけど、自分が見るべきイシューとプルリクを定義してちゃんと設定したら最高になったので、チームメンバーに共有しておきました。</p>&mdash; ひさいち (@hisaichi5518) <a href="https://twitter.com/hisaichi5518/status/841646391873036289">2017年3月14日</a></blockquote>-->
+      <!--    <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">スター14000の巨大OSSのメンテナーになると、一瞬でGitHubのフィードが埋まってしまう。unwatchしてJasperで管理するしかないしJasper最高</p>&mdash; ぎぎにゃん (@giginet) <a href="https://twitter.com/giginet/status/839153061150928896">2017年3月7日</a></blockquote>-->
+      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper、設定せずに持て余してたけど、自分が見るべきイシューとプルリクを定義してちゃんと設定したら最高になったので、チームメンバーに共有しておきました。</p>&mdash; ひさいち (@hisaichi5518) <a href="https://twitter.com/hisaichi5518/status/841646391873036289">2017年3月14日</a></blockquote>-->
       <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">ESDoc もだけど、この方のつくるアプリは着眼点に加えて外観も練られており気に入っている。常用するツールだからこそ外観は重要。 / “ストレスフリーなGitHubのIssue生活 - クックパッド開発者ブログ” <a href="https://t.co/hJB2Htotga">https://t.co/hJB2Htotga</a></p>&mdash; アカベコ (@akabekobeko) <a href="https://twitter.com/akabekobeko/status/841636626325368833">2017年3月14日</a></blockquote>-->
       <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperすごくいいんだけど、本音をいえばGitHub本体が提供してほしい機能ではある。</p>&mdash; FUJI Goro (@__gfx__) <a href="https://twitter.com/__gfx__/status/740400476894703617">2016年6月8日</a></blockquote>-->
       <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper便利だわ</p>&mdash; 及川卓也 / Takuya Oikawa (@takoratta) <a href="https://twitter.com/takoratta/status/832190639441797120">2017年2月16日</a></blockquote>-->
