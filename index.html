@@ -233,15 +233,15 @@
 
       <script>
         const el = document.querySelector('#download');
-        const version = 'v1.0.2';
+        const version = 'v1.0.3';
         if (navigator.platform.indexOf('Mac') !== -1) {
-          el.href = 'https://www.dropbox.com/s/d0on2oabzkvf5je/jasper_v1.0.2_mac.zip?dl=1';
+          el.href = 'https://www.dropbox.com/s/ww09e8snz1i0sq9/jasper_v1.0.3_mac.zip?dl=1';
           el.querySelector('#platform').textContent = 'Mac';
         } else if (navigator.platform.indexOf('Win') !== -1) {
-          el.href = 'https://www.dropbox.com/s/ahy9ii9zhcji880/jasper_v1.0.2_windows_setup.exe?dl=1';
+          el.href = 'https://www.dropbox.com/s/dhwy3vttmuo3r15/jasper_v1.0.3_windows_setup.exe?dl=1';
           el.querySelector('#platform').textContent = 'Windows';
         } else if (navigator.platform.indexOf('Linux') !== -1) {
-          el.href = 'https://www.dropbox.com/s/dwydsq18u82zgeu/jasper_v1.0.2_linux.zip?dl=1';
+          el.href = 'https://www.dropbox.com/s/jmtbzmips3n7d2b/jasper_v1.0.3_linux.zip?dl=1';
           el.querySelector('#platform').textContent = 'Linux';
         }
         el.querySelector('#version').textContent = version;
