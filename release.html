@@ -27,6 +27,14 @@
   <link rel="stylesheet" href="./css/release.css"/>
   <link rel="stylesheet" href="./css/materialdesignicons.css"/>
   <style>
+    .downloads {
+      margin-bottom: 1em;
+    }
+
+    .download.inactive {
+      background-color: #aaaaaa;
+    }
+
     .content article img {
       max-width: 300px;
       box-shadow: 4px 4px 10px #aaa;
@@ -61,18 +69,49 @@
 
 <div class="content">
   <div class="downloads">
-    <a class="download js-track" title="Download for mac" href="https://www.dropbox.com/s/9ajmcd4pu3hmsbe/jasper_v1.0.7_mac.zip?dl=1">
-      <span>Download for</span><span class="mdi mdi-apple large"></span>
+    <a class="download js-track download-for-arm64-mac" title="Download for mac" href="https://www.dropbox.com/s/z0yvg441kxeiy7p/jasper_v1.0.7_mac_arm64.zip?dl=1">
+      <div>
+        <div class="download-label">Download App for</div>
+        <div class="platform">Apple Silicon Mac</div>
+      </div>
     </a>
 
-    <a class="download js-track" title="Download for Windows" href="https://www.dropbox.com/s/1v50x0hp6xcvg4o/jasper_v1.0.7_windows_setup.exe?dl=1">
-      <span>Download for</span><span class="mdi mdi-microsoft-windows large"></span>
+    <a class="download js-track download-for-x64-mac" title="Download for mac" href="https://www.dropbox.com/s/8nvm1agwqk9pug8/jasper_v1.0.7_mac_x64.zip?dl=1">
+      <div>
+        <div class="download-label">Download App for</div>
+        <div class="platform">Intel Mac</div>
+      </div>
     </a>
 
-    <a class="download js-track" title="Download for Linux" href="https://www.dropbox.com/s/dgokv0ipb1ein3z/jasper_v1.0.7_linux.zip?dl=1">
-      <span>Download for</span><span class="mdi mdi-linux large"></span>
+    <a class="download js-track download-for-windows" title="Download for Windows" href="https://www.dropbox.com/s/1v50x0hp6xcvg4o/jasper_v1.0.7_windows_setup.exe?dl=1">
+      <div>
+        <div class="download-label">Download App for</div>
+        <div class="platform">Windows</div>
+      </div>
+    </a>
+
+    <a class="download js-track download-for-linux" title="Download for Linux" href="https://www.dropbox.com/s/dgokv0ipb1ein3z/jasper_v1.0.7_linux.zip?dl=1">
+      <div>
+        <div class="download-label">Download App for</div>
+        <div class="platform">Linux</div>
+      </div>
     </a>
   </div>
+
+  <script>
+    if (navigator.platform.indexOf('Mac') !== -1) {
+      document.querySelector('.download-for-windows').classList.add('inactive');
+      document.querySelector('.download-for-linux').classList.add('inactive');
+    } else if (navigator.platform.indexOf('Win') !== -1) {
+      document.querySelector('.download-for-arm64-mac').classList.add('inactive');
+      document.querySelector('.download-for-x64-mac').classList.add('inactive');
+      document.querySelector('.download-for-linux').classList.add('inactive');
+    } else if (navigator.platform.indexOf('Linux') !== -1) {
+      document.querySelector('.download-for-arm64-mac').classList.add('inactive');
+      document.querySelector('.download-for-x64-mac').classList.add('inactive');
+      document.querySelector('.download-for-windows').classList.add('inactive');
+    }
+  </script>
 
   <article id="1-0-7">
     <h1><span>1.0.7</span> <time>2022/01/16</time></h1>
