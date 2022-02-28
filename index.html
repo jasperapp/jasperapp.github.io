@@ -67,8 +67,12 @@
       position: absolute;
       width: 200px;
       left: 50%;
-      top: 110px;
+      top: 90px;
       margin-left: 220px;
+    }
+
+    .download {
+      margin-bottom: 16px;
     }
 
     .stream-sample {
@@ -224,27 +228,38 @@
   <div>
     <div class="downloads">
 
-      <a class="download js-track" id="download" href="#">
+      <a class="download js-track" id="download1" href="#">
         <div>
-          <div>Download App</div>
-          <div class="notice"><span id="version"></span> for <span id="platform"></span></div>
+          <div class="download-label">Download App for</div>
+          <div class="platform"></div>
+        </div>
+      </a>
+
+      <a class="download js-track" id="download2" href="#">
+        <div>
+          <div class="download-label">Download App for</div>
+          <div class="platform"></div>
         </div>
       </a>
 
       <script>
-        const el = document.querySelector('#download');
-        const version = 'v1.0.7';
+        const download1 = document.querySelector('#download1');
+        const download2 = document.querySelector('#download2');
         if (navigator.platform.indexOf('Mac') !== -1) {
-          el.href = 'https://www.dropbox.com/s/9ajmcd4pu3hmsbe/jasper_v1.0.7_mac.zip?dl=1';
-          el.querySelector('#platform').textContent = 'Mac';
+          download1.href = 'https://www.dropbox.com/s/z0yvg441kxeiy7p/jasper_v1.0.7_mac_arm64.zip?dl=1';
+          download1.querySelector('.platform').textContent = 'Apple Silicon Mac';
+
+          download2.href = 'https://www.dropbox.com/s/8nvm1agwqk9pug8/jasper_v1.0.7_mac_x64.zip?dl=1';
+          download2.querySelector('.platform').textContent = 'Intel Mac';
         } else if (navigator.platform.indexOf('Win') !== -1) {
-          el.href = 'https://www.dropbox.com/s/1v50x0hp6xcvg4o/jasper_v1.0.7_windows_setup.exe?dl=1';
-          el.querySelector('#platform').textContent = 'Windows';
+          download1.href = 'https://www.dropbox.com/s/1v50x0hp6xcvg4o/jasper_v1.0.7_windows_setup.exe?dl=1';
+          download1.querySelector('.platform').textContent = 'Windows';
+          download2.style.display = 'none';
         } else if (navigator.platform.indexOf('Linux') !== -1) {
-          el.href = 'https://www.dropbox.com/s/dgokv0ipb1ein3z/jasper_v1.0.7_linux.zip?dl=1';
-          el.querySelector('#platform').textContent = 'Linux';
+          download1.href = 'https://www.dropbox.com/s/dgokv0ipb1ein3z/jasper_v1.0.7_linux.zip?dl=1';
+          download1.querySelector('.platform').textContent = 'Linux';
+          download2.style.display = 'none';
         }
-        el.querySelector('#version').textContent = version;
       </script>
     </div>
   </div>
@@ -342,8 +357,9 @@
   <div class="users">
     <div>Hundreds of developers are using Jasper in a business/OSS activity. And it is also used by several people in GitHub inc.</div>
     <div class="tweets">
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">最高 GitHub Issue リーダーであるところの Jasper が遂に v1 で登場。素晴らしく便利なので使ったことない方は試してみることをオススメします。&gt; RT</p>&mdash; Yohei KIKUTA (@yohei_kikuta) <a href="https://twitter.com/yohei_kikuta/status/1313098528344825856?ref_src=twsrc%5Etfw">October 5, 2020</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">I’m amazed how much more productive @ jasperappio has made me in my OSS/Github work. I’ve been really impressed. Definitely nicer than email</p>&mdash; Misty (@mistydemeo) <a href="https://twitter.com/mistydemeo/status/778841101109080064">2016年9月22日</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Just got told about <a href="https://twitter.com/jasperappio">@jasperappio</a>. As someone who does all work through issues and PRs, this is awesome.</p>&mdash; Joe Nash (@jna_sh) <a href="https://twitter.com/jna_sh/status/798283937344651264">2016年11月14日</a></blockquote>
+<!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Just got told about <a href="https://twitter.com/jasperappio">@jasperappio</a>. As someone who does all work through issues and PRs, this is awesome.</p>&mdash; Joe Nash (@jna_sh) <a href="https://twitter.com/jna_sh/status/798283937344651264">2016年11月14日</a></blockquote>-->
       <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">社内に使ってる人がそこそこいるよ / “GitHub用のIssue Reader「Jasper」の開発を振り返ってみる - maru source” <a href="https://t.co/vhoCB262du">https://t.co/vhoCB262du</a></p>&mdash; Takafumi Ikeda (@ikeike443) <a href="https://twitter.com/ikeike443/status/808269733782896640">2016年12月12日</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">今までそんなに多くのRepository管理してなくて問題に感じてなかったから気づかなかったんだけど、Jasper神では</p>&mdash; こにふぁー (@konifar) <a href="https://twitter.com/konifar/status/757749741622919168">2016年7月26日</a></blockquote>
       <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper最高すぎる。使い勝手が良いのはそうなんだけど、ChromeのTabでGithub Issueとか開いててメモリガンガン消費みたいなこともなくなったのはでかい。</p>&mdash; だるま (@red_fat_daruma) <a href="https://twitter.com/red_fat_daruma/status/758338511187513344">2016年7月27日</a></blockquote>
