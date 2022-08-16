@@ -69,28 +69,28 @@
 
 <div class="content">
   <div class="downloads">
-    <a class="download js-track download-for-arm64-mac" title="Download for mac" href="https://www.dropbox.com/s/z0yvg441kxeiy7p/jasper_v1.0.7_mac_arm64.zip?dl=1">
+    <a class="download js-track download-for-arm64-mac" title="Download for mac" href="https://www.dropbox.com/s/6gpa3aqo0uxtptc/jasper_v1.1.0_mac_arm64.zip?dl=1">
       <div>
         <div class="download-label">Download App for</div>
         <div class="platform">Apple Silicon Mac</div>
       </div>
     </a>
 
-    <a class="download js-track download-for-x64-mac" title="Download for mac" href="https://www.dropbox.com/s/8nvm1agwqk9pug8/jasper_v1.0.7_mac_x64.zip?dl=1">
+    <a class="download js-track download-for-x64-mac" title="Download for mac" href="https://www.dropbox.com/s/5l60wgq0j5bmbdf/jasper_v1.1.0_mac_x64.zip?dl=1">
       <div>
         <div class="download-label">Download App for</div>
         <div class="platform">Intel Mac</div>
       </div>
     </a>
 
-    <a class="download js-track download-for-windows" title="Download for Windows" href="https://www.dropbox.com/s/1v50x0hp6xcvg4o/jasper_v1.0.7_windows_setup.exe?dl=1">
+    <a class="download js-track download-for-windows" title="Download for Windows" href="https://www.dropbox.com/s/d88xc82lx35q95t/jasper_v1.1.0_windows_setup.exe?dl=1">
       <div>
         <div class="download-label">Download App for</div>
         <div class="platform">Windows</div>
       </div>
     </a>
 
-    <a class="download js-track download-for-linux" title="Download for Linux" href="https://www.dropbox.com/s/dgokv0ipb1ein3z/jasper_v1.0.7_linux.zip?dl=1">
+    <a class="download js-track download-for-linux" title="Download for Linux" href="https://www.dropbox.com/s/bkaot92zvw8it1u/jasper_v1.1.0_linux.zip?dl=1">
       <div>
         <div class="download-label">Download App for</div>
         <div class="platform">Linux</div>
@@ -112,6 +112,31 @@
       document.querySelector('.download-for-windows').classList.add('inactive');
     }
   </script>
+
+  <article id="1-1-1">
+    <h1><span>1.0.1</span> <time>2022/08/15</time></h1>
+    <div class="changelog">
+      <p>Fix</p>
+      <ul>
+        <li>Not notification by self updating <a href='https://github.com/jasperapp/jasper/pull/250'>#250</a></li>
+        <li>Highlighting comments on PR <a href='https://github.com/jasperapp/jasper/pull/251'>#251</a></li>
+        <li>SameSite cookies for Enterprise authentication <a href='https://github.com/jasperapp/jasper/pull/231'>#231</a> Thanks <a href='https://github.com/kyushun'>@kyushun</a></li>
+      </ul>
+      <p>Feat</p>
+      <ul>
+        <li>Supporting GitHub New Projects <a href='https://github.com/jasperapp/jasper/pull/234'>#234</a></li>
+        <li>Supporting `label:@current_date`, `label:@prev_date`, `label:@next_date` filter <a href='https://github.com/jasperapp/jasper/pull/242'>#242</a></li>
+        <li>Supporting GitHub OAuth <a href='https://github.com/jasperapp/jasper/pull/245'>#245</a></li>
+        <li>Supporting Japanese <a href='https://github.com/jasperapp/jasper/pull/246'>#246</a></li>
+        <li>Supporting `title:foo` filter <a href='https://github.com/jasperapp/jasper/pull/247'>#247</a></li>
+        <li>Supporting multi queries of filter</li>
+      </ul>
+      <p>Breaking</p>
+      <ul>
+        <li>Not supporting dark-mode on GitHub. Please use the GitHub appearance settings. <a href='https://github.com/jasperapp/jasper/pull/249'>#249</a></li>
+      </ul>
+    </div>
+  </article>
 
   <article id="1-0-7">
     <h1><span>1.0.7</span> <time>2022/01/16</time></h1>
