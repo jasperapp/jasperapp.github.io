@@ -246,17 +246,17 @@
         const download1 = document.querySelector('#download1');
         const download2 = document.querySelector('#download2');
         if (navigator.platform.indexOf('Mac') !== -1) {
-          download1.href = 'https://www.dropbox.com/s/6gpa3aqo0uxtptc/jasper_v1.1.0_mac_arm64.zip?dl=1';
+          download1.href = 'https://www.dropbox.com/s/qm8vfn8mprp274n/jasper_v1.1.1_mac_arm64.zip?dl=1';
           download1.querySelector('.platform').textContent = 'Apple Silicon Mac';
 
-          download2.href = 'https://www.dropbox.com/s/5l60wgq0j5bmbdf/jasper_v1.1.0_mac_x64.zip?dl=1';
+          download2.href = 'https://www.dropbox.com/s/ust1tj02nfxswxq/jasper_v1.1.1_mac_x64.zip?dl=1';
           download2.querySelector('.platform').textContent = 'Intel Mac';
         } else if (navigator.platform.indexOf('Win') !== -1) {
-          download1.href = 'https://www.dropbox.com/s/d88xc82lx35q95t/jasper_v1.1.0_windows_setup.exe?dl=1';
+          download1.href = 'https://www.dropbox.com/s/ch7tcnnn9oy5lcc/jasper_v1.1.1_windows_setup.exe?dl=1';
           download1.querySelector('.platform').textContent = 'Windows';
           download2.style.display = 'none';
         } else if (navigator.platform.indexOf('Linux') !== -1) {
-          download1.href = 'https://www.dropbox.com/s/bkaot92zvw8it1u/jasper_v1.1.0_linux.zip?dl=1';
+          download1.href = 'https://www.dropbox.com/s/r6rcqbzlthlek6g/jasper_v1.1.1_linux.zip?dl=1';
           download1.querySelector('.platform').textContent = 'Linux';
           download2.style.display = 'none';
         }
