@@ -228,39 +228,12 @@
   <div>
     <div class="downloads">
 
-      <a class="download js-track" id="download1" href="#">
+      <a class="download js-track" id="download" href="https://www.dropbox.com/scl/fi/c5d9ska9vollwunqg2a1h/jasper_v1.1.3_mac_arm64.zip?rlkey=6op50l6jlhvnexhhluxjwdkti&st=2i4e4za6&dl=1">
         <div>
           <div class="download-label">Download App for</div>
-          <div class="platform"></div>
+          <div class="platform">Apple Silicon Mac</div>
         </div>
       </a>
-
-      <a class="download js-track" id="download2" href="#">
-        <div>
-          <div class="download-label">Download App for</div>
-          <div class="platform"></div>
-        </div>
-      </a>
-
-      <script>
-        const download1 = document.querySelector('#download1');
-        const download2 = document.querySelector('#download2');
-        if (navigator.platform.indexOf('Mac') !== -1) {
-          download1.href = 'https://www.dropbox.com/s/isqn71c1ovvudw7/jasper_v1.1.2_mac_arm64.zip?dl=1';
-          download1.querySelector('.platform').textContent = 'Apple Silicon Mac';
-
-          download2.href = 'https://www.dropbox.com/s/2prhwhhgt3eo4km/jasper_v1.1.2_mac_x64.zip?dl=1';
-          download2.querySelector('.platform').textContent = 'Intel Mac';
-        } else if (navigator.platform.indexOf('Win') !== -1) {
-          download1.href = 'https://www.dropbox.com/s/ipswzu5xvpvxpwp/jasper_v1.1.2_windows_setup.exe?dl=1';
-          download1.querySelector('.platform').textContent = 'Windows';
-          download2.style.display = 'none';
-        } else if (navigator.platform.indexOf('Linux') !== -1) {
-          download1.href = 'https://www.dropbox.com/s/wemdsvwlt16egvl/jasper_v1.1.2_linux.zip?dl=1';
-          download1.querySelector('.platform').textContent = 'Linux';
-          download2.style.display = 'none';
-        }
-      </script>
     </div>
   </div>
 </header>
@@ -351,51 +324,6 @@
 <!--        キーボードだけでissueリストの移動、閲覧、未読表示、ブックマーク保存など、様々なことができます。キーボードショートカットはカスタマイズも可能です(Macのみ)。-->
         <img src="./image/top/keyboard.png">
       </div>
-    </div>
-  </div>
-
-  <div class="users">
-    <div>Hundreds of developers are using Jasper in a business/OSS activity. And it is also used by several people in GitHub inc.</div>
-    <div class="tweets">
-      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">最高 GitHub Issue リーダーであるところの Jasper が遂に v1 で登場。素晴らしく便利なので使ったことない方は試してみることをオススメします。&gt; RT</p>&mdash; Yohei KIKUTA (@yohei_kikuta) <a href="https://twitter.com/yohei_kikuta/status/1313098528344825856?ref_src=twsrc%5Etfw">October 5, 2020</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">I’m amazed how much more productive @ jasperappio has made me in my OSS/Github work. I’ve been really impressed. Definitely nicer than email</p>&mdash; Misty (@mistydemeo) <a href="https://twitter.com/mistydemeo/status/778841101109080064">2016年9月22日</a></blockquote>
-<!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">Just got told about <a href="https://twitter.com/jasperappio">@jasperappio</a>. As someone who does all work through issues and PRs, this is awesome.</p>&mdash; Joe Nash (@jna_sh) <a href="https://twitter.com/jna_sh/status/798283937344651264">2016年11月14日</a></blockquote>-->
-      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">社内に使ってる人がそこそこいるよ / “GitHub用のIssue Reader「Jasper」の開発を振り返ってみる - maru source” <a href="https://t.co/vhoCB262du">https://t.co/vhoCB262du</a></p>&mdash; Takafumi Ikeda (@ikeike443) <a href="https://twitter.com/ikeike443/status/808269733782896640">2016年12月12日</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">今までそんなに多くのRepository管理してなくて問題に感じてなかったから気づかなかったんだけど、Jasper神では</p>&mdash; こにふぁー (@konifar) <a href="https://twitter.com/konifar/status/757749741622919168">2016年7月26日</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper最高すぎる。使い勝手が良いのはそうなんだけど、ChromeのTabでGithub Issueとか開いててメモリガンガン消費みたいなこともなくなったのはでかい。</p>&mdash; だるま (@red_fat_daruma) <a href="https://twitter.com/red_fat_daruma/status/758338511187513344">2016年7月27日</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">jasperを早速使い始めてお仕事１日目だけど、とてもとても良い気がしている。ブラウザでgithub開く機会がなくなりそうだ <a href="https://twitter.com/hashtag/nodefest?src=hash">#nodefest</a></p>&mdash; ゆいたゃん (@yui_tang) <a href="https://twitter.com/yui_tang/status/797975054386507777">2016年11月14日</a></blockquote>
-      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubから来る大量の通知メールのフィルタリングにお困りのデザイナーにも超オススメのMac/Windows Appが出ました / JasperというGitHub Issue Readerを作りました - maru source <a href="https://t.co/4RgmJtmC7z">https://t.co/4RgmJtmC7z</a></p>&mdash; transit_kix (@transit_kix) <a href="https://twitter.com/transit_kix/status/740352316914556928">2016年6月8日</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper買ったけど、これすごいいいですね！メールだと自分がメンションされてるのしか来ないけど、Jasperで見ると誰が何に対してどのリポジトリのどのイシューで返してるってすぐわかってとても見やすい・・・</p>&mdash; meyco (@meyco) <a href="https://twitter.com/meyco/status/758818730683936768">2016年7月29日</a></blockquote>
-      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperが俺みたいに立場上めっちゃPR見なければいかん人間にとってめっちゃ便利だな。良くOSS側のPRとか取り零してるが、これで割とすぐ確認できそう。</p>&mdash; 夜行性のフレンズ じょーかー (@joker1007) <a href="https://twitter.com/joker1007/status/840109623919104000">2017年3月10日</a></blockquote>
-      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubのIssue/PRリーダーのJasper開発者の方によるJasperの活用方法の紹介。Jasper本当に便利なので頑張って欲しいし会社の標準にしたいくらい。 / “ストレスフリーなGitHubのIssue生活 - ク…” <a href="https://t.co/tovpyElq4D">https://t.co/tovpyElq4D</a></p>&mdash; uenot (@braitom) <a href="https://twitter.com/braitom/status/841638889953538048">2017年3月14日</a></blockquote>
-      <!--    <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">スター14000の巨大OSSのメンテナーになると、一瞬でGitHubのフィードが埋まってしまう。unwatchしてJasperで管理するしかないしJasper最高</p>&mdash; ぎぎにゃん (@giginet) <a href="https://twitter.com/giginet/status/839153061150928896">2017年3月7日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper、設定せずに持て余してたけど、自分が見るべきイシューとプルリクを定義してちゃんと設定したら最高になったので、チームメンバーに共有しておきました。</p>&mdash; ひさいち (@hisaichi5518) <a href="https://twitter.com/hisaichi5518/status/841646391873036289">2017年3月14日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">ESDoc もだけど、この方のつくるアプリは着眼点に加えて外観も練られており気に入っている。常用するツールだからこそ外観は重要。 / “ストレスフリーなGitHubのIssue生活 - クックパッド開発者ブログ” <a href="https://t.co/hJB2Htotga">https://t.co/hJB2Htotga</a></p>&mdash; アカベコ (@akabekobeko) <a href="https://twitter.com/akabekobeko/status/841636626325368833">2017年3月14日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperすごくいいんだけど、本音をいえばGitHub本体が提供してほしい機能ではある。</p>&mdash; FUJI Goro (@__gfx__) <a href="https://twitter.com/__gfx__/status/740400476894703617">2016年6月8日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper便利だわ</p>&mdash; 及川卓也 / Takuya Oikawa (@takoratta) <a href="https://twitter.com/takoratta/status/832190639441797120">2017年2月16日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">トライアルが終わりJasper買ったけど良い。github issueを頻繁にアクセスしない、非エンジニアに特におすすめです。<a href="https://t.co/YVPQ9Rkt57">https://t.co/YVPQ9Rkt57</a></p>&mdash; tamasally (@tamasally) <a href="https://twitter.com/tamasally/status/779261224152215552">2016年9月23日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">βテストさせてもらったけどとてもベンリなので是非 / &quot;JasperというGitHub Issue Readerを作りました&quot; <a href="https://t.co/ApU37sclsD">https://t.co/ApU37sclsD</a></p>&mdash; Naoki Hashimoto (@hashcc) <a href="https://twitter.com/hashcc/status/740392108490555392">2016年6月8日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">これ最高ですからね、 early preview 版使ってます。 / “JasperというGitHub Issue Readerを作りました - maru source” <a href="https://t.co/WuKDRzaWa4">https://t.co/WuKDRzaWa4</a></p>&mdash; Yosuke FURUKAWA (@yosuke_furukawa) <a href="https://twitter.com/yosuke_furukawa/status/740341899236495361">2016年6月8日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">便利に使っています。<br>レビュー待ちの Pull Request の様子がよくわかるようになりましたー <a href="https://t.co/RFTLCmINig">https://t.co/RFTLCmINig</a></p>&mdash; Tatsuya Tsuruoka (@ttsuruoka) <a href="https://twitter.com/ttsuruoka/status/740557119372419072">2016年6月8日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">jasper使い始めたんだけどライフチェンジングだ。</p>&mdash; Masayoshi Michikawa (@michiomochi) <a href="https://twitter.com/michiomochi/status/740414718511316992">2016年6月8日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper便利最高</p>&mdash; Hello (@rejasupotaro) <a href="https://twitter.com/rejasupotaro/status/740340044028858368">2016年6月8日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">GitHubのIssue/PRリーダのJasperむっちゃいい<a href="https://t.co/b6NbuWUyHl">https://t.co/b6NbuWUyHl</a></p>&mdash; shimpeiws (@shimpeiws) <a href="https://twitter.com/shimpeiws/status/790367466744532996">2016年10月24日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">メールで管理するのに限界を感じたので Jasper のライセンスを購入した。</p>&mdash; Ryoji Yoshioka (@ojiry) <a href="https://twitter.com/ojiry/status/837488511586447360">2017年3月3日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">jasper知らなかったんだけど、俺が欲しかったのこれじゃんって感じがした</p>&mdash; Yasuhisa Yoshida (@syou6162) <a href="https://twitter.com/syou6162/status/841572218467315712">2017年3月14日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">Jasper, 使いやすいよ！いつもお世話になってます。 / ストレスフリーなGitHubのIssue生活 (via <a href="https://twitter.com/Pocket">@Pocket</a>) <a href="https://t.co/ag1mb3AbZE">https://t.co/ag1mb3AbZE</a></p>&mdash; むらみん (@Mura_Mi) <a href="https://twitter.com/Mura_Mi/status/841559747790684161">2017年3月14日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">Jasperマジで神だよね / “ストレスフリーなGitHubのIssue生活 - クックパッド開発者ブログ” <a href="https://t.co/EOk70gLo8i">https://t.co/EOk70gLo8i</a></p>&mdash; ミスター・スポットキ (@tokifujp) <a href="https://twitter.com/tokifujp/status/841521129344851968">2017年3月14日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">一時間くらいJasper使ってるけど良い感じ<br>GHE対応は嬉しい</p>&mdash; suzumi (@suzumi49n) <a href="https://twitter.com/suzumi49n/status/841491333139251201">2017年3月14日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper 買って結構便利に使っている</p>&mdash; れい (Yoshikawa Ryota) (@rrreeeyyy) <a href="https://twitter.com/rrreeeyyy/status/841478314095140864">2017年3月14日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">管理するリポジトリ多すぎてこれがないと捗らないw / ストレスフリーなGitHubのIssue生活 - クックパッド開発者ブログ <a href="https://t.co/7NOibsVQ1I">https://t.co/7NOibsVQ1I</a></p>&mdash; Ryoji Yoshioka (@ojiry) <a href="https://twitter.com/ojiry/status/841837068309340160">2017年3月15日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper入れたけど最高っぽい。</p>&mdash; teitei (@teitei_tk) <a href="https://twitter.com/teitei_tk/status/842212250949574657">2017年3月16日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper 便利</p>&mdash; Makoto Sasaki (@waniji) <a href="https://twitter.com/waniji/status/841942006687510528">2017年3月15日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperめちゃめちゃ便利だなこれ。。。。</p>&mdash; TOM🍛 (@realeyez77) <a href="https://twitter.com/realeyez77/status/841899783778377728">2017年3月15日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">まだ10分くらいしか使ってないけど超便利だ。これ。 <a href="https://t.co/QAbGOFadbU">https://t.co/QAbGOFadbU</a></p>&mdash; Hideaki Kano (@hkano) <a href="https://twitter.com/hkano/status/842635487156228096">2017年3月17日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">昨日 <a href="https://t.co/KX3yMBQBux">https://t.co/KX3yMBQBux</a> の体験期間が過ぎてたので1日 Jasper 無しで生活してたんだけど厳しかった。他の GitHub Reader アプリっぽいのもいくつか眺めたり動かしてみたりしたけどしっくりこなく。というわけでポチッと課金。やっぱ楽だわ</p>&mdash; hogelog(東京) (@hogelog) <a href="https://twitter.com/hogelog/status/786056680224264192">2016年10月12日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"><p lang="ja" dir="ltr">めっちゃ便利でした <a href="https://twitter.com/hashtag/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0?src=hash">#はてなブログ</a><br>GithubのISSUEでなにやらやるなら、Jasperが便利だぞ！の話 - uzullaがブログ<a href="https://t.co/LUeCtyifkK">https://t.co/LUeCtyifkK</a> <a href="https://t.co/NG1yHuY3zB">pic.twitter.com/NG1yHuY3zB</a></p>&mdash; うずら (@uzulla) <a href="https://twitter.com/uzulla/status/752914088615751680">2016年7月12日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasper、個人的に使っててとても重宝しててオススメですよという所感です <a href="https://twitter.com/hashtag/nodefest?src=hash">#nodefest</a></p>&mdash; nash (@nashcft) <a href="https://twitter.com/nashcft/status/797736638864441344">2016年11月13日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperめっちゃ便利だな。これはいいな。</p>&mdash; Yuki Kodama (@kuy) <a href="https://twitter.com/kuy/status/797604926742368256">2016年11月13日</a></blockquote>-->
-      <!--      <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Jasperいいよ</p>&mdash; tenntennʕ ◔ϖ◔ʔ ==Go (@tenntenn) <a href="https://twitter.com/tenntenn/status/797600942887555072">2016年11月13日</a></blockquote>-->
     </div>
   </div>
 </div>
