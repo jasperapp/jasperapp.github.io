@@ -88,6 +88,16 @@
     <h1><span>2.0.0</span> <time>2025/09/03</time></h1>
     <div class="changelog">
       <p>Feat</p>
+      <div style="background: rgba(255, 65, 124, 0.85); color: white; border-radius: 10px; padding: 4px 10px; font-weight: bold">
+        <p>
+          このバージョンから<code>org:</code>や<code>repo:</code>, <code>user:</code>がデフォルトではAND結合となります。
+          <br/>
+          そのため、ストリームのクエリを以下のようにを修正する必要があります。<br/>
+          <code>involves:foo org:aaa org:bbb</code> → <code>involves:foo (org:aaa OR org:bbb)</code>
+          <br/>
+          <code>repo:</code>や<code>user:</code>についても同様の修正が必要となります。
+        </p>
+      </div>
       <ul>
         <li>Use advanced search. For more details, click <a href='https://github.blog/changelog/2025-03-06-github-issues-projects-api-support-for-issues-advanced-search-and-more/#mag-api-support-for-issues-advanced-search'>here</a></li>
         <li>Update Electron to v37.4.0 <a href='https://github.com/jasperapp/jasper/pull/299'>#299</a></li>
